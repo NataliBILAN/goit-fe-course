@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+.wrapper {
+    width: 470px;
+    margin: auto;
+    padding: 20px 10px 20px 10px;
+    border: 1px solid rgb(55,71,79);
+   
+
+}
+.main-article {
+    width: 420px;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    text-align: justify
+    
+}
+h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #b4ad9e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #626262;
+    
+}
+
+p{
+    width: 420px;
+    font-size: 14px;
+    color: #626262;
+}
+
+

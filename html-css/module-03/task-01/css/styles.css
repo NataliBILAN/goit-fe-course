@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    font-size: 0px;
+    font-family: "Playfair Display", serif;
+    list-style-type: none;
+    background-color: rgb(225, 195, 226);
+    padding: 15px;
+    width: 930px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px 20px;
+}
+
+.menu-item {
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.menu-link {
+    display: inline-block;
+    width: 140px;
+    vertical-align: middle;
+    line-height: 45px;
+    color: #0097A7;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+}
+
+.menu-link:hover {
+    color: #512DA8;
+    background-color: #B2EBF2;
+    border-radius: 20px;    
+}
