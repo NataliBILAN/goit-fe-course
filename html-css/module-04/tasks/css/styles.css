@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    padding-top: 20px;
+    width: 815px;
+}
+.list {
+    padding: 15px;
+    background-color: #37474F;
+    margin:20px;
+}
+
+.list-item {
+    float: left;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.list-item:hover {
+    background-color: rgb(220, 171, 240);
+    color: #37474F;
+    border-radius: 15px;
+
+}
+
+.list-item:last-child {
+    margin-right: 0px;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.list-item-second{
+    font-size: 23px;
+    color: #0E1116;
+}
+.list-second{
+    padding: 10px;
+    width: 150px;
+}
+.list-second li:nth-child(-n+3) {
+    background-color: #88292F;
+}
+.list-second li:nth-child(n+4) {
+    background-color: #5DB7DE;
+}
+.list-second li:nth-child(n+7) {
+    background-color: #0D5D56;
+}
+
+.list-item-third{
+    font-size: 18px;
+}
+.list-item-third::before {
+    content: "\2192";
+}
+
+.list-third{
+    padding: 10px;
+    width: 200px;
+}
+
+.list-fourth{
+    width: 400px;
+    list-style: none;
+    padding: 15px;
+    color: rgb(106, 27, 154);
+counter-reset: V;
+}
+.list-item-fourth{
+    font-size: 23px;
+    counter-increment: V;
+    /* display: inline-block; */
+
+}
+
+.list-item-fourth::before{
+    content: counter(V, upper-roman);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 138, 101);
+    outline: 3px solid rgb(109, 76, 65);
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+
+
+
