@@ -98,6 +98,10 @@ h2::after {
     margin-bottom: 30px;
     background-color: #e8effc;
 }
+.product-footer{
+    width: 255px;
+    height: 40px;
+}
 
 .product:nth-child(5) {
     margin-right: 0px;
@@ -115,7 +119,7 @@ h2::after {
     display: block;
 }
 
-.product h4 {
+.product-footer h4 {
     box-sizing: border-box;
     font-size: 18px;
     color: #ffffff;
@@ -132,7 +136,7 @@ h2::after {
    
 }
 
-.product p {
+.product-footer p {
     float: left;
     width: 54px;
     height: 40px;
@@ -146,10 +150,17 @@ h2::after {
     line-height: 40px;
     
 }
-.product:hover{
+
+
+.product:hover .product-footer{
     background-color:#1abc9c;
-    
 }
+/* .product:hover h4{
+    background-color:#1abc9c;
+}
+.product:hover p{
+    background-color:#1abc9c;
+} */
 .last-news {
     width: 1110px;
     height: 668px;
