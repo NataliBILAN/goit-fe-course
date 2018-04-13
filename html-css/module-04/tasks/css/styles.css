@@ -72,7 +72,7 @@ nav{
 }
 
 .list-fourth{
-    width: 400px;
+    width: 500px;
     list-style: none;
     padding: 15px;
     color: rgb(106, 27, 154);
@@ -81,11 +81,12 @@ counter-reset: V;
 .list-item-fourth{
     font-size: 23px;
     counter-increment: V;
-    /* display: inline-block; */
+
 
 }
 
 .list-item-fourth::before{
+    margin-right: 10px;
     content: counter(V, upper-roman);
     display: inline-block;
     width: 50px;
