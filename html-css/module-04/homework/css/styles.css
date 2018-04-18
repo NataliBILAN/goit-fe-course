@@ -23,8 +23,7 @@ header h3 {
     font-weight: 300;
     text-transform: uppercase;
     padding: 8px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+   
 }
 
 header h3::first-letter {
@@ -98,7 +97,7 @@ h2::after {
 
 .gallery {
     width: 1110px;
-    height: 862px;
+    
     margin-bottom: 85px;
 }
 
@@ -187,7 +186,7 @@ h2::after {
     color: #555252;
     font-weight: 600;
     margin-bottom: 26px;
-    margin-top: 14px;
+    
 }
 
 .news h4::after {
@@ -201,6 +200,7 @@ h2::after {
 
 .news img {
     display: block;
+    margin-bottom: 14px;
 }
 
 .news p {
@@ -216,15 +216,19 @@ h2::after {
 
 button {
     height: 51px;
-    width: 159px;
+    width: 160px;
     background-color: #4ec6ab;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
     font-weight: 300;
     border: none;
+    border-radius: 3px;
 }
 
 .last-news h2 {
     margin-bottom: 80px;
 }
+
+
+  
