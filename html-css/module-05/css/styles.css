@@ -218,7 +218,7 @@ p {
 .overlay {
     width: 235px;
     height: 261px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.54);
     opacity: 0;
     position: absolute;
     left: 10px;
@@ -226,7 +226,7 @@ p {
 }
 
 .card:hover .overlay {
-    opacity: 0.549;
+    opacity: 1;
 }
 
 .card:hover .product-footer h4 {
@@ -245,7 +245,11 @@ p {
     background-color: transparent;
     border: 1px solid #ffffff;
     display: inline-block;
+
 }
+[class^="pe-7s-"]{
+    font-size: 30px;
+    color: white;}
 
 .like:hover {
     border: none;
@@ -285,16 +289,13 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
-
-.cart::before {
-    content: "\e66e";
-    font-family: 'Pe-icon-7-stroke';
-    font-size: 30px;
-    color: #ffffff;
+.pe-7s-cart{
     position: absolute;
     left: 13px;
     top: 12px;
 }
+
+
 
 .like {
     position: absolute;
@@ -302,12 +303,6 @@ p {
     left: 35px;
 }
 
-.like::before {
-    content: "\e642";
-    font-family: 'Pe-icon-7-stroke';
-    font-size: 30px;
-    color: #ffffff;
-}
 
 .shuffle {
     position: absolute;
@@ -315,12 +310,12 @@ p {
     left: 94px;
 }
 
-.shuffle::before {
+/* .shuffle::before {
     content: "\e614";
     font-family: 'Pe-icon-7-stroke';
     font-size: 30px;
     color: #ffffff;
-}
+} */
 
 .clock {
     position: absolute;
@@ -328,12 +323,12 @@ p {
     right: 35px;
 }
 
-.clock::before {
+/* .clock::before {
     content: "\e66b";
     font-family: 'Pe-icon-7-stroke';
     font-size: 30px;
     color: #ffffff;
-}
+} */
 
 footer {
     width: 1600px;
