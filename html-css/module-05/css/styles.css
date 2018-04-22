@@ -308,12 +308,6 @@ p {
     left: 94px;
 }
 
-/* .shuffle::before {
-    content: "\e614";
-    font-family: 'Pe-icon-7-stroke';
-    font-size: 30px;
-    color: #ffffff;
-} */
 
 .clock {
     position: absolute;
@@ -321,12 +315,6 @@ p {
     right: 35px;
 }
 
-/* .clock::before {
-    content: "\e66b";
-    font-family: 'Pe-icon-7-stroke';
-    font-size: 30px;
-    color: #ffffff;
-} */
 
 footer {
     width: 1600px;
