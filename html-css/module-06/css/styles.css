@@ -1,0 +1,358 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+.wrapper {
+    width: 1200px;
+    margin: auto;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #95e1d3;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 88px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu li {
+    list-style: none;
+    margin-right: 58px;
+    position: relative;
+}
+
+.main-menu a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: #95e1d3;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+
+.main-menu a:hover {
+    color: #f38181;
+}
+
+.main-menu a:hover::before {
+    opacity: 1;
+}
+
+.main-menu a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: #f38181;
+    opacity: 0;
+    transition: all 200ms linear;
+}
+
+.main-menu :last-child {
+    margin-right: 0px;
+}
+
+nav {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-family: 'Kaushan Script', sans-serif;
+    +89 color: #333333;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #333333;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.services h2 {
+    margin-bottom: 62px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-top: 35px;
+}
+
+.service-card::before {
+    content: '';
+    display: block;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-alarm {
+    background-image: url(../img/ALARM.png);
+    background-repeat: no-repeat;
+}
+
+.icon-line {
+    background-image: url(../img/LINE.png);
+    background-repeat: no-repeat;
+}
+
+.icon-computer {
+    background-image: url(../img/COMPUTER.png);
+    background-repeat: no-repeat;
+}
+
+.icon-book {
+    background-image: url(../img/BOOK.png);
+    background-repeat: no-repeat;
+}
+
+.icon-home {
+    background-image: url(../img/HOME.png);
+    background-repeat: no-repeat;
+}
+
+.icon-image {
+    background-image: url(../img/IMAGE.png);
+    background-repeat: no-repeat;
+}
+
+.service-card {
+    width: 383px;
+    padding-left: 60px;
+}
+
+.services-list {
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.service-card h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.service-card p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+}
+
+.services {
+    margin-bottom: 78px;
+}
+
+.team h2 {
+    margin-bottom: 43px;
+}
+
+.team>p {
+    width: 960px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #999999;
+    line-height: 24px;
+    margin-bottom: 87px;
+}
+
+.team-list {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.team-card h5 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.team-card p {
+    color: #999999;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+}
+
+.team-card img {
+    margin-bottom: 25px;
+}
+
+.team {
+    border-bottom: 1px solid #999999;
+    padding-bottom: 82px;
+}
+
+.facebook,
+.twitter,
+.pinterest,
+.instagram {
+    width: 56px;
+    height: 56px;
+    background-color: #fce38a;
+    border: none;
+    transition: background-color 200ms linear;
+    cursor: pointer;
+}
+
+.overlay {
+    background-image: linear-gradient( 90deg, rgba(252, 227, 138, 0.54) 0%, rgba(243, 129, 129, 0.54) 100%);
+    width: 380px;
+    height: 470px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 200ms linear;
+}
+
+.team-item:hover .overlay {
+    opacity: 1;
+    box-shadow: 10px 10px 0 rgb(149, 225, 211);
+}
+
+.team-item {
+    position: relative;
+}
+
+.social-icons {
+    width: 224px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook::before {
+    content: url(../img/facebook.png);
+}
+
+.twitter::before {
+    content: url(../img/twitter.png);
+}
+
+.pinterest::before {
+    content: url(../img/pinterest.png);
+}
+
+.instagram::before {
+    content: url(../img/instagram.png);
+}
+
+.facebook:hover {
+    background-color: #95e1d3;
+}
+
+.twitter:hover {
+    background-color: #95e1d3;
+}
+
+.pinterest:hover {
+    background-color: #95e1d3;
+}
+
+.instagram:hover {
+    background-color: #95e1d3;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 62px;
+    align-items: center;
+}
+
+footer p {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer span {
+    color: #f38181;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subscribe {
+    width: 150px;
+    height: 40px;
+    background-color: #95e1d3;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+form {
+    font-size: 0;
+}
+
+input {
+    width: 230px;
+    height: 40px;
+    color: #cccccc;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    padding-left: 13px;
+}
