@@ -34,6 +34,7 @@ header {
     list-style: none;
     margin-right: 58px;
     position: relative;
+    box-sizing: content-box;
 }
 
 .main-menu a {
@@ -46,16 +47,21 @@ header {
     transition-property: color;
     transition-duration: 200ms;
     transition-timing-function: linear;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
 }
 
 .main-menu a:hover {
     color: #f38181;
+    border-bottom: 2px solid #f38181;
+    padding-bottom: 10px;
 }
 
-.main-menu a:hover::before {
+/* .main-menu a:hover::before {
     opacity: 1;
-}
+} */
 
+/* 
 .main-menu a:before {
     content: "";
     position: absolute;
@@ -66,7 +72,7 @@ header {
     background-color: #f38181;
     opacity: 0;
     transition: all 200ms linear;
-}
+} */
 
 .main-menu :last-child {
     margin-right: 0px;
@@ -80,7 +86,7 @@ nav {
 
 h3 {
     font-family: 'Kaushan Script', sans-serif;
-    +89 color: #333333;
+    color: #333333;
     font-size: 24px;
     text-align: center;
     font-weight: bold;
@@ -110,48 +116,42 @@ h2::after {
     margin-top: 35px;
 }
 
-.service-card::before {
-    content: '';
-    display: block;
-    width: 32px;
+.card-icon-alarm,
+.card-icon-line,
+.card-icon-computer,
+.card-icon-book,
+.card-icon-home,
+.card-icon-image {
     background-repeat: no-repeat;
-    background-position: center;
-}
-
-.icon-alarm {
-    background-image: url(../img/ALARM.png);
-    background-repeat: no-repeat;
-}
-
-.icon-line {
-    background-image: url(../img/LINE.png);
-    background-repeat: no-repeat;
-}
-
-.icon-computer {
-    background-image: url(../img/COMPUTER.png);
-    background-repeat: no-repeat;
-}
-
-.icon-book {
-    background-image: url(../img/BOOK.png);
-    background-repeat: no-repeat;
-}
-
-.icon-home {
-    background-image: url(../img/HOME.png);
-    background-repeat: no-repeat;
-}
-
-.icon-image {
-    background-image: url(../img/IMAGE.png);
-    background-repeat: no-repeat;
-}
-
-.service-card {
+    background-position: initial;
     width: 383px;
     padding-left: 60px;
 }
+
+.card-icon-alarm {
+    background-image: url(../img/ALARM.png);
+}
+
+.card-icon-line {
+    background-image: url(../img/LINE.png);
+}
+
+.card-icon-computer {
+    background-image: url(../img/COMPUTER.png);
+}
+
+.card-icon-book {
+    background-image: url(../img/BOOK.png);
+}
+
+.card-icon-home {
+    background-image: url(../img/HOME.png);
+}
+
+.card-icon-image {
+    background-image: url(../img/IMAGE.png);
+}
+
 
 .services-list {
     min-height: 250px;
@@ -161,7 +161,7 @@ h2::after {
     align-content: space-between;
 }
 
-.service-card h4 {
+.services-list h4 {
     font-size: 14px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -170,7 +170,7 @@ h2::after {
     margin-bottom: 14px;
 }
 
-.service-card p {
+.services-list p {
     font-size: 15px;
     font-weight: 400;
     color: #999999;
@@ -255,12 +255,14 @@ h2::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: box-shadow 200ms linear;
+    box-shadow: 10px 10px 0 rgb(149, 225, 211);
+    transition: margin 200ms linear;
 }
 
 .team-item:hover .overlay {
     opacity: 1;
-    box-shadow: 10px 10px 0 rgb(149, 225, 211);
+    margin-left: -10px;
+    margin-top: -10px;
 }
 
 .team-item {
@@ -275,20 +277,28 @@ h2::after {
     align-items: center;
 }
 
-.facebook::before {
-    content: url(../img/facebook.png);
+.facebook {
+    background-image: url(../img/facebook.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.twitter::before {
-    content: url(../img/twitter.png);
+.twitter {
+    background-image: url(../img/twitter.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.pinterest::before {
-    content: url(../img/pinterest.png);
+.pinterest {
+    background-image: url(../img/pinterest.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.instagram::before {
-    content: url(../img/instagram.png);
+.instagram {
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .facebook:hover {
@@ -312,6 +322,8 @@ footer {
     justify-content: space-between;
     min-height: 62px;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 footer p {
@@ -330,7 +342,9 @@ footer span {
 
 .subscribe {
     width: 150px;
-    height: 40px;
+    /* height: 40px; */
+    padding-top: 11px;
+    padding-bottom: 11px;
     background-color: #95e1d3;
     border: none;
     color: #ffffff;
@@ -349,6 +363,7 @@ form {
 input {
     width: 230px;
     height: 40px;
+    border: 1px solid #cccccc;
     color: #cccccc;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
