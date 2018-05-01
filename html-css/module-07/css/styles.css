@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 1400px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 68px;
+    margin-bottom: 100px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a {
+
+    color: #fed136;
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+}
+
+.main-menu a:hover {
+    color: #fed136;
+}
+
+.main-menu li {
+    list-style: none;
+    margin-right: 40px;
+}
+
+.main-menu li:last-child {
+    margin-right: 0;
+}
+
+.main-menu a {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    line-height: 41px;
+    text-decoration: none;
+}
+
+.services {
+    margin-bottom: 122px;
+}
+
+.title-services h2 {
+    width: 200px;
+    color: #222222;
+    font-family: Montserrat, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0 auto 8px auto;
+}
+
+.title-services p {
+    width: 296px;
+    color: #777777;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.services-list {
+    width: 942px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.services-item {
+    width: 274px;
+    display: inline-block;
+    margin-right: 56px;
+}
+.services-item:last-child{
+    margin-right: 0;
+}
+.basket,
+.laptop,
+.locked {
+    border: 3px solid #fed136;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px auto;
+}
+
+.basket {
+    background: url(../img/Icon-Basket.png) no-repeat center;
+}
+
+.laptop {
+    background: url(../img/Icon-Laptop.png) no-repeat center;
+}
+
+.locked {
+    background: url(../img/Icon-Locked.png) no-repeat center;
+}
+
+.services-item h3 {
+    color: #222222;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.45px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-item p {
+    color: #777777;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.35px;
+    text-align: center;
+}
+
+.contact {
+    padding-bottom: 114px;
+    padding-top: 100px;
+    background: #222222 url(../img/Map-Image.png) no-repeat 780px 120px;
+}
+
+.title-contact h2 {
+    width: 300px;
+    margin: 0 auto 12px auto;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.title-contact p {
+    width: 300px;
+    margin: 0 auto 76px auto;
+    color: #777777;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+form {}
+
+.container {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    width: 454px;
+    padding: 18px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    color: #bbbbbb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.35px;
+    border-radius: 2px;
+}
+
+textarea {
+    display: inline-block;
+    width: 454px;
+    height: 210px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    resize: none;
+    color: #bbbbbb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.35px;
+    border-radius: 2px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 240px;
+    height: 66px;
+    background-color: #fed136;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 24px 46px 24px 46;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+textarea:valid {
+    outline: 2px solid #66BB6A;
+}
+
+textarea:invalid {
+    outline: 2px solid #b71c1c;
+}
+
+input:required:valid {
+    outline: 2px solid #66BB6A;
+}
+
+input:required:invalid {
+    outline: 2px solid #b71c1c;
+}
