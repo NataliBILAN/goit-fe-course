@@ -161,7 +161,6 @@ header {
     font-style: italic;
 }
 
-form {}
 
 .container {
     width: 940px;
@@ -225,19 +224,27 @@ input[type="submit"] {
     font-weight: 700;
     text-transform: uppercase;
 }
+input:required:invalid {
+    outline: 2px solid #b71c1c;
+}
+textarea:invalid {
+    outline: 2px solid #b71c1c;
+}
+
 
 textarea:valid {
     outline: 2px solid #66BB6A;
 }
 
-textarea:invalid {
-    outline: 2px solid #b71c1c;
-}
 
 input:required:valid {
     outline: 2px solid #66BB6A;
 }
-
-input:required:invalid {
+/* 
+input[name=name]:invalid{
     outline: 2px solid #b71c1c;
 }
+input[name=name]:valid{
+    outline: 2px solid #66BB6A;
+    } */
+
