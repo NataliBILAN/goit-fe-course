@@ -57,22 +57,7 @@ header {
     padding-bottom: 10px;
 }
 
-/* .main-menu a:hover::before {
-    opacity: 1;
-} */
 
-/* 
-.main-menu a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -10px;
-    left: 0;
-    background-color: #f38181;
-    opacity: 0;
-    transition: all 200ms linear;
-} */
 
 .main-menu :last-child {
     margin-right: 0px;
@@ -122,34 +107,31 @@ h2::after {
 .card-icon-book,
 .card-icon-home,
 .card-icon-image {
-    background-repeat: no-repeat;
-    background-position: initial;
     width: 383px;
     padding-left: 60px;
 }
 
 .card-icon-alarm {
-    background-image: url(../img/ALARM.png);
-}
+    background: url(../img/ALARM.png) no-repeat;}
 
 .card-icon-line {
-    background-image: url(../img/LINE.png);
+    background: url(../img/LINE.png) no-repeat;
 }
 
 .card-icon-computer {
-    background-image: url(../img/COMPUTER.png);
+    background: url(../img/COMPUTER.png) no-repeat;
 }
 
 .card-icon-book {
-    background-image: url(../img/BOOK.png);
+    background: url(../img/BOOK.png) no-repeat;
 }
 
 .card-icon-home {
-    background-image: url(../img/HOME.png);
+    background: url(../img/HOME.png) no-repeat;
 }
 
 .card-icon-image {
-    background-image: url(../img/IMAGE.png);
+    background: url(../img/IMAGE.png) no-repeat;
 }
 
 
@@ -157,7 +139,7 @@ h2::after {
     min-height: 250px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: space-between;
 }
 
@@ -215,6 +197,7 @@ h2::after {
 }
 
 .team-card p {
+    
     color: #999999;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
@@ -224,7 +207,13 @@ h2::after {
 }
 
 .team-card img {
+    top: 0;
+    left: 0;
+    display: block;
+    width: 380px;
+    height: 470px;
     margin-bottom: 25px;
+    
 }
 
 .team {
@@ -238,14 +227,27 @@ h2::after {
 .instagram {
     width: 56px;
     height: 56px;
-    background-color: #fce38a;
     border: none;
     transition: background-color 200ms linear;
     cursor: pointer;
 }
 
+.block{
+    position: relative;
+    width: 380px;
+    height: 470px;
+    top: 0;
+    left: 0;
+    background-color: #95e1d3;
+    transition: position 200ms linear;
+
+}
+.team-item:hover .block{
+    top: 10px;
+    left: 10px;
+}
 .overlay {
-    background-image: linear-gradient( 90deg, rgba(252, 227, 138, 0.54) 0%, rgba(243, 129, 129, 0.54) 100%);
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%);
     width: 380px;
     height: 470px;
     opacity: 0;
@@ -255,16 +257,22 @@ h2::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 10px 0 rgb(149, 225, 211);
-    transition: margin 200ms linear;
+    transition: opacity 200ms linear;
+    /* box-shadow: 10px 10px 0 rgb(149, 225, 211); */
+    
 }
 
 .team-item:hover .overlay {
     opacity: 1;
-    margin-left: -10px;
-    margin-top: -10px;
+    /* margin-left: -10px;
+    margin-top: -10px; */
 }
-
+.team-card{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+}
 .team-item {
     position: relative;
 }
@@ -278,27 +286,21 @@ h2::after {
 }
 
 .facebook {
-    background-image: url(../img/facebook.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/facebook.png) no-repeat center #fce38a;
 }
 
 .twitter {
-    background-image: url(../img/twitter.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/twitter.png) no-repeat center #fce38a;
+
 }
 
 .pinterest {
-    background-image: url(../img/pinterest.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/pinterest.png) no-repeat center #fce38a;
+ 
 }
 
 .instagram {
-    background-image: url(../img/instagram.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/instagram.png) no-repeat center #fce38a;
 }
 
 .facebook:hover {
@@ -320,7 +322,7 @@ h2::after {
 footer {
     display: flex;
     justify-content: space-between;
-    min-height: 62px;
+    /* min-height: 62px; */
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -342,9 +344,7 @@ footer span {
 
 .subscribe {
     width: 150px;
-    /* height: 40px; */
-    padding-top: 11px;
-    padding-bottom: 11px;
+    line-height: 40px;
     background-color: #95e1d3;
     border: none;
     color: #ffffff;
