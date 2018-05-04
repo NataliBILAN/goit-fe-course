@@ -273,9 +273,9 @@ transition: all 200ms linear;
 }
 
 .team-card{
-    position: absolute;
+    /* position: absolute;
     top: 0px;
-    left: 0px;
+    left: 0px; */
     margin-bottom: 25px;
     transition: position 200ms linear;
     
