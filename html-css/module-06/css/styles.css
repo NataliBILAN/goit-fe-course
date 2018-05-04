@@ -182,11 +182,10 @@ h2::after {
 
 .team-list {
     display: flex;
-    position: relative;
     justify-content: space-between;
 }
 
-.team-card h5 {
+.team-item h5 {
     font-weight: 400;
     font-size: 14px;
     color: #333333;
@@ -196,7 +195,7 @@ h2::after {
     margin-bottom: 8px;
 }
 
-.team-card p {
+.team-item p {
     
     color: #999999;
     font-size: 15px;
@@ -207,12 +206,14 @@ h2::after {
 }
 
 .team-card img {
+    position: absolute;
     top: 0;
     left: 0;
     display: block;
     width: 380px;
     height: 470px;
-    margin-bottom: 25px;
+transition: all 200ms linear;
+
     
 }
 
@@ -239,13 +240,10 @@ h2::after {
     top: 0;
     left: 0;
     background-color: #95e1d3;
-    transition: position 200ms linear;
+    
 
 }
-.team-item:hover .block{
-    top: 10px;
-    left: 10px;
-}
+
 .overlay {
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%);
     width: 380px;
@@ -258,19 +256,28 @@ h2::after {
     justify-content: center;
     align-items: center;
     transition: opacity 200ms linear;
-    /* box-shadow: 10px 10px 0 rgb(149, 225, 211); */
+    
     
 }
 
 .team-item:hover .overlay {
     opacity: 1;
-    /* margin-left: -10px;
-    margin-top: -10px; */
+    top: -10px;
+    left: -10px;
+   
 }
+
+.team-item:hover .team-card img{
+    top: -10px;
+    left: -10px;
+}
+
 .team-card{
     position: absolute;
     top: 0px;
     left: 0px;
+    margin-bottom: 25px;
+    transition: position 200ms linear;
     
 }
 .team-item {
