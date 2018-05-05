@@ -229,7 +229,7 @@ h2::after {
 }
 
 .block {
-    position: relative;
+    /* position: relative; */
     width: 380px;
     height: 470px;
     top: 0;
@@ -271,8 +271,6 @@ h2::after {
 }
 
 .team-item {
-    position: relative;
-}
 
 .social-icons {
     width: 224px;
