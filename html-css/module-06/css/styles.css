@@ -240,6 +240,7 @@ transition: all 200ms linear;
     top: 0;
     left: 0;
     background-color: #95e1d3;
+    transition: position 200ms linear;
     
 
 }
@@ -262,14 +263,14 @@ transition: all 200ms linear;
 
 .team-item:hover .overlay {
     opacity: 1;
-    top: -10px;
-    left: -10px;
+    /* top: -10px;
+    left: -10px; */
    
 }
 
-.team-item:hover .team-card img{
-    top: -10px;
-    left: -10px;
+.team-item:hover .block{
+    top: 10px;
+    left: 10px;
 }
 
 .team-card{
@@ -277,7 +278,7 @@ transition: all 200ms linear;
     top: 0px;
     left: 0px; */
     margin-bottom: 25px;
-    transition: position 200ms linear;
+   
     
 }
 .team-item {
