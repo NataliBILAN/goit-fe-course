@@ -267,6 +267,7 @@ h2::after {
     top: 0;
     left: 0;
     height: 470px;
+    width: 100%;
     transition: all 200ms linear;
 }
 
