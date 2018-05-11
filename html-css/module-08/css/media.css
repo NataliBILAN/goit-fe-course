@@ -1,0 +1,119 @@
+@media (min-width: 768px) {
+    .wrapper {
+        width: 768px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 670px;
+        margin: 0 auto 140px;
+    }
+    .background {
+        padding-top: 36px;
+        background: url(../img/2.png) no-repeat center rgba(26, 25, 21, 0.9);
+        min-height: 700px;
+    }
+    .logo {
+        margin-bottom: 0px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        width: 156px;
+    }
+    .buttons button:first-child {
+        margin-right: 0px;
+    }
+    h2 {
+        margin: 0 auto 26px;
+        font-size: 52px;
+        width: 510px;
+    }
+    .background p {
+        width: 400px;
+        font-size: 24px;
+        margin: 0 auto 32px;
+    }
+    .find-partner {
+        width: 226px;
+        padding: 12px 24px 10px 22px;
+    }
+    .main-content {
+        padding: 66px 6px 40px;
+    }
+    .main-content h3 {
+        width: 402px;
+        margin: 0 auto 14px;
+    }
+    .option-list {
+        display: flex;
+        width: 492px;
+        height: 502px;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        margin: 0 auto 32px;
+    }
+    .option {
+        margin: 0;
+        flex: 0 0 220px;
+    }
+    .option-list .option:nth-child(2) {
+        order: 3;
+    }
+    .option-list .option:nth-child(3) {
+        order: 2;
+    }
+    .option-list .option:nth-child(4) {
+        order: 4;
+    }
+    .other {
+        width: 192px;
+        padding: 10px 22px 10px 22px;
+    }
+    .tv-icon,
+    .lab-icon,
+    .coffee-icon,
+    .telegram-icon {
+        top: 86px;
+        right: 48px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: 1440px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 942px;
+        margin: 0 auto 140px;
+    }
+    .background {
+        padding-top: 36px;
+        background: url(../img/3.png) no-repeat center rgba(26, 25, 21, 0.9);
+        min-height: 700px;
+    }
+    .main-content {
+        padding: 66px 6px 70px;
+    }
+    .main-content h3 {
+        width: 402px;
+        margin: 0 auto 30px;
+    }
+    .option-list {
+        display: flex;
+        width: 962px;
+        height: 260px;
+        justify-content: space-around;
+        margin: 0 auto 16px;
+    }
+    .option {
+        margin: 0;
+        flex: 0 0 220px;
+    }
+}
