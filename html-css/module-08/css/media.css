@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
     .wrapper {
-        width: 768px;
+        min-width: 768px;
     }
     header {
         display: flex;
@@ -12,6 +12,7 @@
     .background {
         padding-top: 36px;
         background: url(../img/2.png) no-repeat center rgba(26, 25, 21, 0.9);
+        background-size: cover;
         min-height: 700px;
     }
     .logo {
@@ -73,18 +74,21 @@
         width: 192px;
         padding: 10px 22px 10px 22px;
     }
+    .picture{
+        width: 148px;
+    }
     .tv-icon,
     .lab-icon,
     .coffee-icon,
     .telegram-icon {
         top: 86px;
-        right: 48px;
+        right: 12px;
     }
 }
 
 @media (min-width: 1440px) {
     .wrapper {
-        width: 1440px;
+        min-width: 1440px;
     }
     header {
         display: flex;
@@ -96,6 +100,7 @@
     .background {
         padding-top: 36px;
         background: url(../img/3.png) no-repeat center rgba(26, 25, 21, 0.9);
+        background-size: cover;
         min-height: 700px;
     }
     .main-content {
