@@ -2,21 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* outline: 1px rebeccapurple solid; */
+    outline: 1px rebeccapurple solid;
 }
 
-.wrapper {
-    min-width: 320px;
-    margin: 0 auto;
-}
 
-.header {
+header {
     padding-top: 20px;
 }
 
 .buttons {
-    min-width: 200px;
-    margin-bottom: 114px;
+  p
     text-align: center;
 }
 
@@ -45,7 +40,7 @@
 }
 
 .background {
-    padding: 18px 6px 0px 6px;
+    
     min-height: 540px;
     background: url(../img/1.png) no-repeat center rgba(26, 25, 21, 0.9);
 background-size: cover;
@@ -53,7 +48,7 @@ background-size: cover;
 
 .logo {
     display: block;
-    margin-bottom: 28px;
+    /* margin-bottom: 28px; */
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -65,7 +60,7 @@ background-size: cover;
 }
 
 h2 {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
@@ -75,20 +70,19 @@ h2 {
 }
 
 .background p {
-    width: 218px;
+    
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
     text-align: center;
-    margin: 0 auto 12px;
+    /* margin: 0 auto 12px; */
 }
 
 .find-partner {
     display: block;
-    /* width: 280px; */
     padding: 14px 52px 12px 50px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -104,23 +98,23 @@ h2 {
 
 
 .main-content{
-    padding: 64px 6px 54px;
+    padding: 64px 6px 54px; 
 }
 
 .main-content h3 {
-    width: 270px;
+    
     color: #333333;
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 700;
     text-align: center;
     letter-spacing: -0.4px;
-    margin: 0 auto 14px;
+    /* margin: 0 auto 14px; */
 }
 
 .option {
     text-align: center;
-    margin: 0 auto 26px;
+    /* margin: 0 auto 26px; */
   
 }
 
@@ -168,7 +162,7 @@ border: 4px solid #ffffff;
 
 .picture{
     position: relative;
-    width: 258px;
+    min-width: 46.9798%;
     margin: auto;
 }
 .option p {
@@ -180,7 +174,7 @@ border: 4px solid #ffffff;
 .other{
     display: block;
     padding: 10px 70px 10px 70px;
-    margin: auto;
+    /* margin: auto; */
     border: none;
 color: #ff4e50;
 font-family: 'Montserrat', sans-serif;
