@@ -22,8 +22,11 @@
         margin-bottom: 28px;
     
     }
-    .list-option [class*="col-"]:nth-child(odd){
+    .items [class*="col-"]:nth-child(odd){
         margin-bottom: 60px;
+    }
+    .list-option>.col-12 col-md-8 col-xl-10{
+        margin-bottom: 0px;
     }
     .list-option{
         margin-bottom: 40px;
@@ -53,25 +56,22 @@
         padding: 66px 6px 40px;
     }
     
-    .option-list {
-     
-        /* margin: 0 auto 32px; */
-    }
     
        
     .other {
         padding: 10px 22px 10px 22px;
     }
     .picture{
-        width: 58.0392%;
+        /* width: 58.0392%; */
     }
     .tv-icon,
     .lab-icon,
     .coffee-icon,
     .telegram-icon {
-        top: 86px;
-        right: 12px;
+        top: 72%;
+        right: 22%;
     }
+    
 }
 
 
@@ -95,19 +95,12 @@
     .text-header{
         margin-bottom: 12px;
     }
+   
 }
 
 @media (min-width: 1440px) {
-    /* .wrapper {
-        min-width: 1440px;
-    } */
-    header {
-        /* display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        width: 942px; */
-        /* margin: 0 auto 140px; */
-    }
+   
+   
     .background {
         /* padding-top: 36px; */
         background: url(../img/3.png) no-repeat center rgba(26, 25, 21, 0.9);
@@ -116,20 +109,25 @@
     }
     .main-content {
         padding: 66px 6px 70px;
+        
     }
-    .main-content h3 {
-      
-        margin: 0 auto 30px;
+    .option img{
+        width: 121px;
+        height: 121px;
     }
-    .option-list {
-        /* display: flex;
-        width: 962px;
-        height: 260px;
-        justify-content: space-around; */
-        margin: 0 auto 16px;
+    .option-list{
+        
     }
-    .option {
-        margin: 0;
-        /* flex: 0 0 220px; */
+    .list-option [class*="col-"]:nth-child(odd){
+        margin-bottom: 0px;
     }
+    .list-option{
+        margin-bottom: 42px;
+    }
+   .option{
+       /* min-width: 220px; */
+       margin-right: 0px;
+   }
+
+   
 }
