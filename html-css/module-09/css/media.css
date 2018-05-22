@@ -51,6 +51,7 @@
     }
     .find-partner {
         padding: 12px 24px 10px 22px;
+        margin: 0 auto;
     }
     .main-content {
         padding: 66px 6px 40px;
@@ -60,10 +61,9 @@
        
     .other {
         padding: 10px 22px 10px 22px;
+        margin: 0 auto;
     }
-    .picture{
-        /* width: 58.0392%; */
-    }
+    
     .tv-icon,
     .lab-icon,
     .coffee-icon,

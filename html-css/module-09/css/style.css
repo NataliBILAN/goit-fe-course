@@ -82,7 +82,7 @@ h2 {
 .find-partner {
     display: block;
     padding: 14px 52px 12px 50px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -178,7 +178,7 @@ border: 4px solid #ffffff;
 .other{
     display: block;
     padding: 10px 68px 10px 68px;
-    /* margin: auto; */
+    margin: 0 auto;
     border: none;
 color: #ff4e50;
 font-family: 'Montserrat', sans-serif;
