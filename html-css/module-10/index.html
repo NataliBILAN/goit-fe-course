@@ -39,15 +39,18 @@
                     </li>
                 </ul>
               
-                       <a class="button-link link" href="#">
-                           <svg class="button-link__icon">
-                            <use href="img/nav-sprite.svg#icon-icon-shopping"></use>
-                           </svg>
+
+                         <a class="button-link link" href="#">
+
+                           <svg class="button-link__icon" width="28px" height="28px"> 
+                               <use href="img/nav-sprite.svg#icon-shopping"></use>
+                               </svg>
+                         
                        </a>
           
                     <a class="button-link link" href="#">
-                        <svg class="button-link__icon">
-                         <use href="img/nav-sprite.svg#icon-icon-glass"></use>
+                        <svg class="button-link__icon" width="64px" height="32px">
+                         <use href="img/nav-sprite.svg#icon-glass"></use>
                         </svg>
                     </a>
                 
@@ -117,10 +120,12 @@
                 <div class="team-list__item">
                     <div class="team-list__block"></div>
                     <div class="team-list__card">
-                        <img class="team-list__foto" 
+
+                        <img class="team-list__foto" srcset="img/team-min/1-w-min.jpg 380w, img/team-min/1-w@2x-min.jpg 760w"
+                        sizes="380px" src="img/team-min/1-w-min.jpg" alt="Matthew Dix" height="470">
+
                         
-                        src="img/team-min/1-w-min.jpg"
-                        alt="Matthew Dix">
+
                         <div class="team-list__overlay">
                             <div class="social-icons">
                                 <button class="icon-facebook">
@@ -142,7 +147,10 @@
                 <div class="team-list__item">
                     <div class="team-list__block"></div>
                     <div class="team-list__card">
-                        <img class="team-list__foto" src="img/2-w.png" alt="Christopher Campbell">
+                            <img class="team-list__foto" srcset="img/team-min/2-w-min.jpg 380w, img/team-min/2-w@2x-min.jpg 760w"
+                            sizes="380px" src="img/team-min/2-w-min.jpg" alt="Christopher Campbell" height="470">
+
+            
                         <div class="team-list__overlay">
                             <div class="social-icons">
                                 <button class="social-icons__facebook"></button>
@@ -162,7 +170,9 @@
                     <div class="team-list__block"></div>
                     <div class="team-list__card">
 
-                        <img class="team-list__foto" src="img/3-w.png" alt="Michael Fertig">
+                            <img class="team-list__foto" srcset="img/team-min/3-w-min.jpg 380w, img/team-min/3-w@2x-min.jpg 760w"
+                            sizes="380px" src="img/team-min/3-w-min.jpg" alt="Michael Fertig" height="470">
+
 
                         <div class="team-list__overlay">
                             <div class="social-icons">
@@ -184,7 +194,7 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="footer">
+        <footer class="footer container">
 
             <p class="footer__text">&copy; 2016 MoGo free PSD template by
                 <span class="footer__word">Laaqiq</span>
