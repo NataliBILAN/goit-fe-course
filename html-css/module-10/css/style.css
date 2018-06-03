@@ -1,6 +1,10 @@
+
+
+
 .wrapper {
-    width: 1920px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
+
 }
 
 .container {
@@ -304,7 +308,7 @@
 }
 
 .team__text {
-    width: 960px;
+    width: 80%;
     margin: auto;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -519,6 +523,7 @@
 }
 
 .form__subscribe {
+    box-sizing: border-box;
     width: 150px;
     line-height: 40px;
     background-color: #95e1d3;
@@ -536,8 +541,9 @@
 }
 
 .form__email {
+    box-sizing: border-box;
     width: 230px;
-    height: 38px;
+    line-height: 38px;
     border: 1px solid #cccccc;
     color: #cccccc;
     font-size: 15px;
