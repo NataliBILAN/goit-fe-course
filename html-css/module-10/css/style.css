@@ -83,13 +83,13 @@
 .menu-wrap{
     display: flex;
     justify-content: space-between;
-    width: 51.6666%;
+    width: 52.5%;
 }
 .site-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-   
+  width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -97,7 +97,7 @@
 
 .site-navigation__item {
     /* list-style: none; */
-    margin-right: 58px;
+    /* margin-right: 58px; */
     position: relative;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -127,15 +127,13 @@
     padding-bottom: 10px;
 }
 
-.site-navigation :last-child {
-    margin-right: 0px;
-}
+
 .page-header__page-nav{
     min-height: 90px;
  
 }
 .page-nav {
-    
+    width: 79.365%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,10 +166,13 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 542px;
+    width: 100%;
+    margin: 0 auto;
 }
 .page-header__subtitle {
     align-self: center;
     margin: 0;
+   width: 54.7945%;
     /* margin-bottom: 30px; */
     text-align: center;
     color: #ffffff;
@@ -182,7 +183,7 @@
 
 .page-header__caption {
     align-self: center;
-    width: 70%;
+    width: 88%;
     text-align: center;
     margin: 0;
     /* margin-bottom: 120px; */
@@ -320,6 +321,7 @@
 }
 
 .team-list {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -339,6 +341,7 @@
 }
 
 .team-list__text {
+   
     margin: 0 auto;
     color: #999999;
     font-size: 15px;
@@ -349,12 +352,14 @@
 }
 
 .team-list__foto {
+    max-width: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
     display: block;
-    width: 380px;
-    height: 470px;
+    /* width: 380px;
+    height: 470px; */
     -webkit-transition: all 200ms linear;
     -o-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -369,8 +374,11 @@
 .icon-twitter,
 .icon-pinterest,
 .icon-instagram {
-    width: 56px;
-    height: 56px;
+    /* width: 56px;
+    height: 56px; */
+    width: 25%;
+    height: 100%;
+    padding: 0;
     border: none;
     -webkit-transition: background-color 200ms linear;
     -o-transition: background-color 200ms linear;
@@ -379,12 +387,13 @@
 }
 
 .team-list__block {
-    width: 380px;
-    height: 470px;
+    display: block;
+    width: 100%;
+    height: 87.5232%;
     top: 0;
     left: 0;
     margin-bottom: 25px;
-    background-color: #95e1d3;
+    /* background-color: #95e1d3; */
     -webkit-transition: position 200ms linear;
     -o-transition: position 200ms linear;
     transition: position 200ms linear;
@@ -395,8 +404,8 @@
     background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%);
     background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%);
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%);
-    width: 380px;
-    height: 470px;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     position: absolute;
     top: 0px;
@@ -430,6 +439,7 @@
     left: 0;
     height: 470px;
     width: 100%;
+    height: 87.3926%;
     -webkit-transition: all 200ms linear;
     -o-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -437,11 +447,15 @@
 
 .team-list__item {
     position: relative;
+    width: 31.6666%;
+    height: 87.5232%;
 }
 
 .social-icons {
-    width: 224px;
-    height: 56px;
+    /* width: 224px;
+    height: 56px; */
+    width: 58.9473%;
+    height: 11.9148%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -564,4 +578,11 @@
         background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@2X-min.jpeg");
         background-image: linear-gradient(to top, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@2X-min.jpeg");
     }
+}
+@media screen and (max-width: 1919px){
+    .team-list__overlay{
+        height: 97%;
+    }
+
+
 }
