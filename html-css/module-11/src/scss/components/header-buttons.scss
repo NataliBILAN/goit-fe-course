@@ -1,0 +1,15 @@
+
+.button-buy, .button-search{
+    @extend %link;
+    align-self: center;
+}
+.button-buy__icon, .button-search__icon{
+    fill: $main-color;
+    -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+    &:hover {
+        fill:$accent-color;
+}
+}
+

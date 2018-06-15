@@ -1,0 +1,14 @@
+
+.learn {
+    @extend %button;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 3px solid $main-color;
+    padding: 14px 32px;
+    color:$main-color;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}

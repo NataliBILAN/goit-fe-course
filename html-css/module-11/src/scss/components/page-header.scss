@@ -1,0 +1,34 @@
+
+.page-header {
+    min-height: 1000px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.84)), to(rgba(243, 129, 129, 0.84))), url("../img/Layer 15@1X-min.jpeg");
+    background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@1X-min.jpeg");
+    background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@1X-min.jpeg");
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@1X-min.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    
+@media(min-resolution: 192dpi),(min-resolution: 2dppx)
+{  
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.84)), to(rgba(243, 129, 129, 0.84))), url("../img/Layer 15@2X-min.jpeg");
+        background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@2X-min.jpeg");
+        background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@2X-min.jpeg");
+        background-image: linear-gradient(to top, rgba(252, 227, 138, 0.84) 0%, rgba(243, 129, 129, 0.84) 100%), url("../img/Layer 15@2X-min.jpeg");
+}
+
+}
+
+.wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 88px;
+}

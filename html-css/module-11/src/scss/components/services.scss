@@ -1,0 +1,105 @@
+
+
+.services__main-title {
+    @extend %main-title;
+    margin: 0px auto 62px;
+}
+.services__title{
+    @extend %title;
+}
+
+.services__main-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 3px;
+    background-color: $secondary-color;
+    margin-top: 35px;
+}
+.services-list {
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+.services__card-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: $main-font;
+    color: $title-color;
+    font-weight: 400;
+    margin: 0px auto 14px;
+}
+
+.services__card-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: $text-color;
+    font-family: $text-font;
+    line-height: 24px;
+    margin: 0px auto 16px;
+}
+
+.services {
+    @extend %container;
+   padding-top: 24px;
+}
+
+.services__card {
+    position: relative;
+    width: 24%;
+    padding: 18px 0px 14px 60px;
+}
+
+.services__icon::before {
+    position: absolute;
+    left: 0px;
+    top: 18px;
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+$icon: alarm, line, computer, book, home, digital;
+
+@include generate-pseudo-icons(
+    'services__icon--',
+    $icon,
+    '../img/services_icon/',
+    'svg');
+
+
+// .services__icon--alarm::before {
+//     background-image: url("../img/services_icon/alarm.svg");
+// }
+
+// .services__icon--line::before {
+//     background-image: url("../img/services_icon/line.svg");
+// }
+
+// .services__icon--computer::before {
+//     background-image: url("../img/services_icon/computer.svg");
+// }
+
+// .services__icon--book::before {
+//     background-image: url("../img/services_icon/book.svg");
+// }
+
+// .services__icon--home::before {
+//     background-image: url("../img/services_icon/home.svg");
+// }
+
+// .services__icon--image::before {
+//     background-image: url("../img/services_icon/digital.svg");
+// }

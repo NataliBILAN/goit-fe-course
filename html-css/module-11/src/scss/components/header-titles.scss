@@ -1,0 +1,32 @@
+
+.title-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 542px;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-header__subtitle {
+    align-self: center;
+    margin: 0;
+   width: 54.7945%;
+    /* margin-bottom: 30px; */
+    text-align: center;
+    color: $main-color;
+    font-family: $title-font;
+    font-size: 72px;
+    font-weight: 400;
+}
+
+.page-header__caption {
+    align-self: center;
+    width: 88%;
+    text-align: center;
+    margin: 0;
+    color: $main-color;
+    font-family: $main-font;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+}

@@ -1,0 +1,60 @@
+
+.social-icons {
+    /* width: 224px;
+    height: 56px; */
+    width: 58.9473%;
+    height: 11.9148%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.icon-facebook__icon,
+.icon-twitter__icon,
+.icon-pinterest__icon,
+.icon-instagram__icon {
+    fill: $secondary-color;
+}
+
+
+.icon-facebook:hover .icon-facebook__icon {
+    fill: $main-color;
+}
+
+.icon-twitter:hover .icon-twitter__icon {
+    fill: $main-color;
+}
+
+.icon-pinterest:hover .icon-pinterest__icon {
+    fill: $main-color;
+}
+
+.icon-instagram:hover .icon-instagram__icon {
+    fill: $main-color;
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-pinterest,
+.icon-instagram {
+    @extend %button;
+    width: 25%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    -webkit-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    background-color: $accent-color;
+    &:hover {
+        background-color: $secondary-color;
+    }
+    // &:hover .icon-facebook__icon,.icon-twitter__icon,.icon-pinterest__icon,.icon-instagram__icon{
+    //     fill: $main-color;
+    // }
+}

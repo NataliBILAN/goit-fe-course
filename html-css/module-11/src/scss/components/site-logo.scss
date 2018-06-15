@@ -1,0 +1,8 @@
+
+.site-logo {
+    @extend %link;
+    font-family: $main-font;
+    font-size: 30px;
+    font-weight: bold;
+    color: $main-color;
+}

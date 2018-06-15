@@ -1,0 +1,29 @@
+
+.footer {
+    @extend %container;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer__text {
+    color: $title-color;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $main-font;
+}
+
+.footer__word {
+    color: $secondary-color;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $main-font;
+}

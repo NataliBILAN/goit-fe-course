@@ -1,0 +1,41 @@
+
+%container {
+    width: 62.5%;
+    margin: 0 auto;
+}
+
+%link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+%list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%button {
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+%title {
+    font-family: $title-font;
+    color:$title-color;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+%main-title {
+    font-family: $main-font;
+    text-transform: uppercase;
+    color: $title-color;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
