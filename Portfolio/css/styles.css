@@ -1,0 +1,78 @@
+/* .wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+} */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+.introduction{
+    /* position: fixed; */
+    /* z-index: -99; */
+    width: 100%;
+height: auto;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* overflow: hidden; */
+    z-index: 1;
+    background-color: #B2EBF2;
+    background-size: cover;
+}
+
+.video-bg>video {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /* width: auto;
+    height: auto; */
+}
+
+.heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    text-align: center;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+}
+
+.name {
+   
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: white;
+    
+    margin: 0 auto;
+}
+.occupation{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 40px;
+    color: white;
+    margin: 0 auto;
+}
+
+/* .about-me{
+    position: absolute;
+    z-index: 5;
+}
+font-family: 'Coming Soon', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Montserrat', sans-serif; */
