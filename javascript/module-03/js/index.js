@@ -44,7 +44,6 @@
       - addLogin вызывает обе функции и по результату их работы или добавляет логин в logins или нет, 
         возвращая указанные строки. Больше ничего не делает.
 */
-
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 
 let login= prompt('Enter your login')
@@ -69,7 +68,7 @@ const checkIfLoginExists = function(logins, login){
   return false;
 }
 
-const existLogin = checkIfLoginExists(login);
+const existLogin = checkIfLoginExists(logins, login);
 console.log(existLogin);
 
 // Function addLogin
@@ -85,11 +84,12 @@ const addLogin= function(logins, login){
      checkIfLoginExists(logins, login);
      }
   
-       if(!existLogin){
+       if(existLogin){
+          console.log('Такой логин уже используется!')
+       } else{
          logins.push(login);
          console.log('Логин успешно добавлен!');
-       } else{
-        console.log('Такой логин уже используется!')
+       
        }
        
 }
