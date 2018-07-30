@@ -1,6 +1,5 @@
 'use strict'
-const users = [
-  {
+const users = [{
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
     name: 'Moore Hensley',
     email: 'moorehensley@indexia.com',
@@ -105,24 +104,24 @@ const users = [
 //  */
 const getAllNames = arr => users.map(user => user.name);
 
-console.log(getAllNames(users)); 
+console.log(getAllNames(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
-                            
+
 // // /**
 // //  * Получить массив объектов пользователей по цвету глаз (поле eyeColor)
 // //  */
-const getUsersByEyeColor = (arr, color) => users.filter( user => user.eyeColor === color);
+const getUsersByEyeColor = (arr, color) => users.filter(user => user.eyeColor === color);
 
 console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
-                                            
+
 // // /**
 // //  * Получить массив имен пользователей по полу (поле gender)
 // //  */
 const getUsersByGender = (arr, gender) => users
-.filter( user => user.gender === gender)
-.map (user => user.name);
+  .filter(user => user.gender === gender)
+  .map(user => user.name);
 
 console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
@@ -130,15 +129,15 @@ console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazque
 // // /**
 // //  * Получить массив только неактивных пользователей (поле isActive)
 // //  */
-const getInactiveUsers = arr => users.filter( user => !user.isActive);
+const getInactiveUsers = arr => users.filter(user => !user.isActive);
 
 console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
-                      
-                                 
+
+
 /**
  * Получить пользоваля (не массив) по email (поле email, он уникальный)
  */
-const getUserByEmail = (arr, email) => users.find (user => user.email === email);
+const getUserByEmail = (arr, email) => users.find(user => user.email === email);
 
 console.log(getUserByEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
 console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
@@ -147,32 +146,31 @@ console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект по
 // // /**
 // //  * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age)
 // //  */
-const getUsersWithAge = (arr, min, max) => users.filter(user => user.age>min & user.age<max);
+const getUsersWithAge = (arr, min, max) => users.filter(user => user.age > min & user.age < max);
 
 console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
-                                            
-console.log(getUsersWithAge(users, 30, 40)); 
+
+console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
-                                 
-                                 
+
+
 // // /**
 // //  * Получить общую сумму баланса (поле balance) всех пользователей
 // //  */
-const getTotalBalance = arr => users.reduce( (acc, value) => acc + value.balance, 0);
+const getTotalBalance = arr => users.reduce((acc, value) => acc + value.balance, 0);
 
 console.log(getTotalBalance(users)); // 20916
-                                
-                                
+
+
 // /**
 //  * Массив имен всех пользователей у которых есть друг с указанным именем
 //  */
 const getUsersByFriend = (arr, name) => users
-.filter(user => user.friends.includes(name))
-.map (user => user.name);
+  .filter(user => user.friends.includes(name))
+  .map(user => user.name);
 
-                                                     
-  
+
+
 
 console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
-                                            
