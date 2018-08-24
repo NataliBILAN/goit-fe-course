@@ -126,30 +126,31 @@ const galleryItems = [{
   const list = document.querySelector('.preview');
   console.log(list);  
   const previewImgs = list.querySelectorAll('.preview-img');
-  console.log(previewImgs)
+  console.log(previewImgs);
   // const arrOfpreviewImgs = Array.from(previewImgs);
 
-  function showFullview(event){
+  function handleOnClick(event){
 
     if (event.target.nodeName !== "IMG") return;
     const imgFullview=gallery.querySelector('.fullview-img');
-    imgFullview.setAttribute('src', event.target.dataset.fullview)
+    imgFullview.setAttribute('src', event.target.dataset.fullview);
     
+    MakeAccentImg(previewImgs, event);
   }
 
-  gallery.addEventListener('click', showFullview);
-
-  function handleMakeAccentImg (previewImgs, event){
-    previewImgs.forEach(previewImg =>{
-    if(previewImg !== event.target){
-      previewImg.classlist.remove('js-preview-active-img')
+  
+  function MakeAccentImg (previewImgs, event){
+    previewImgs.forEach(el =>{
+    if(el !== event.target){
+      el.classlist.remove('js-preview-active-img');
     } else{
-      previewImg.classlist.add('js-preview-active-img')
+      el.classlist.add('js-preview-active-img');
     }
   });
-  }
-
-  gallery.addEventListener('click', handleMakeAccentImg);
+}
+  
+    gallery.addEventListener('click', handleOnClick);
+  // gallery.addEventListener('click', handleMakeAccentImg);
   
 })
 
