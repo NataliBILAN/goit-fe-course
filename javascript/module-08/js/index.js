@@ -85,8 +85,12 @@ const galleryItems = [{
   },
 ];
 
-document.addEventListener('DOMContentLoaded', ()=>{
+  document.addEventListener('DOMContentLoaded', ()=>{
   const gallery = document.querySelector('.js-image-gallery');
+  
+  
+  
+  
 
   function createPreviewItem () {
     const previewItems = `
@@ -118,8 +122,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
   gallery.insertAdjacentHTML('afterbegin', fullview);
   console.log(preview);
 
-  const list = gallery.querySelector('.preview');
-  console.log(list);
+
+  const list = document.querySelector('.preview');
+  console.log(list);  
+  const previewImgs = list.querySelectorAll('.preview-img');
+  console.log(previewImgs)
+  // const arrOfpreviewImgs = Array.from(previewImgs);
 
   function showFullview(event){
 
@@ -129,7 +137,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
   }
 
-  list.addEventListener('click', showFullview);
+  gallery.addEventListener('click', showFullview);
+
+  function handleMakeAccentImg (previewImgs, event){
+    previewImgs.forEach(previewImg =>{
+    if(previewImg !== event.target){
+      previewImg.classlist.remove('js-preview-active-img')
+    } else{
+      previewImg.classlist.add('js-preview-active-img')
+    }
+  });
+  }
+
+  gallery.addEventListener('click', handleMakeAccentImg);
   
 })
 

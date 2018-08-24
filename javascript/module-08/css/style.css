@@ -33,18 +33,23 @@ img {
   border: 2px solid black;
   border-radius: 3px;
   margin-right: 8px;
-  transition: transform .2s;
+  /* transition: transform .2s; */
 }
 .preview-item:last-child{
   margin-right: 0;
 }
-.preview-item:hover{
+/* .preview-item:hover{
   transform: scale(1.5);
-}
+} */
 
 .fullview {
   width: 1280px;
   margin: 0 auto 20px;
   border: 2px solid black;
   border-radius: 3px;
+}
+
+.js-preview-active-img{
+  border-radius: 50%;
+  border: 2px solid black;
 }
