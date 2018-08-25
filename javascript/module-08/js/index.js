@@ -120,19 +120,7 @@ const galleryItems = [{
   gallery.insertAdjacentHTML('afterbegin', fullview);
   console.log(preview);
 
-
-  const list = document.querySelector('.preview');
-  console.log(list);  
   
- 
-  const previewImgs = list.querySelectorAll('.preview-img');
-  console.log(previewImgs);
-  const arrOfpreviewImgs = Array.from(previewImgs);
-  console.log(arrOfpreviewImgs);
-
-//     gallery.addEventListener('click', handleOnClick);
-//   // gallery.addEventListener('click', handleMakeAccentImg);
-
   gallery.addEventListener('click', function (e) {
     if (event.target.nodeName !== "IMG") return;
     const imgFullview = gallery.querySelector('.fullview-img');
