@@ -9,6 +9,8 @@ img {
   max-width: 100%;
   height: auto;
   cursor: pointer;
+  border: 2px solid black;
+  border-radius: 3px;
 }
 
 .image-gallery {
@@ -30,8 +32,7 @@ img {
 }
 
 .preview-item {
-  border: 2px solid black;
-  border-radius: 3px;
+  
   margin-right: 8px;
   /* transition: transform .2s; */
 }
@@ -50,6 +51,7 @@ img {
 }
 
 .js-preview-active-img{
-  border-radius: 50%;
-  border: 2px solid black;
+  border-radius: 10%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
 }

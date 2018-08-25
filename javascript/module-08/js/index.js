@@ -130,29 +130,24 @@ const galleryItems = [{
   const arrOfpreviewImgs = Array.from(previewImgs);
   console.log(arrOfpreviewImgs);
 
-  function handleOnClick(event){
-   
-    if (event.target.nodeName !== "IMG") return;
-    const imgFullview=gallery.querySelector('.fullview-img');
-    imgFullview.setAttribute('src', event.target.dataset.fullview);
-    
-    MakeAccentImg(arrOfpreviewImgs, event);
-  }
+//     gallery.addEventListener('click', handleOnClick);
+//   // gallery.addEventListener('click', handleMakeAccentImg);
 
-  
-  function MakeAccentImg (arrOfpreviewImgs, event){
-    arrOfpreviewImgs.forEach(el =>{
-    if(el !== event.target){
-      el.classlist.remove('js-preview-active-img');
-    } else{
-      el.classlist.add('js-preview-active-img');
-        
-    }
+  gallery.addEventListener('click', function (e) {
+    if (event.target.nodeName !== "IMG") return;
+    const imgFullview = gallery.querySelector('.fullview-img');
+    imgFullview.setAttribute('src', event.target.dataset.fullview);
   });
-}
   
-    gallery.addEventListener('click', handleOnClick);
-  // gallery.addEventListener('click', handleMakeAccentImg);
+  document.querySelectorAll('.preview-img').forEach((el, i) => {
+    if(i === 0) {
+      el.classList.add('js-preview-active-img');
+    }
+    el.addEventListener('click', function (e) {
+      gallery.querySelector('.js-preview-active-img').classList.remove('js-preview-active-img');
+      this.classList.add('js-preview-active-img');
+    });
+  });
   
 })
 
