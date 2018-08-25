@@ -89,8 +89,6 @@ const galleryItems = [{
   const gallery = document.querySelector('.js-image-gallery');
   
   
-  
-  
 
   function createPreviewItem () {
     const previewItems = `
@@ -116,7 +114,7 @@ const galleryItems = [{
 
   const fullview = createFullviewItem(galleryItems[0]);
   const preview = createPreviewItem(galleryItems);
- 
+   
   gallery.insertAdjacentHTML('beforeend', preview);
 
   gallery.insertAdjacentHTML('afterbegin', fullview);
@@ -125,26 +123,30 @@ const galleryItems = [{
 
   const list = document.querySelector('.preview');
   console.log(list);  
+  
+ 
   const previewImgs = list.querySelectorAll('.preview-img');
   console.log(previewImgs);
-  // const arrOfpreviewImgs = Array.from(previewImgs);
+  const arrOfpreviewImgs = Array.from(previewImgs);
+  console.log(arrOfpreviewImgs);
 
   function handleOnClick(event){
-
+   
     if (event.target.nodeName !== "IMG") return;
     const imgFullview=gallery.querySelector('.fullview-img');
     imgFullview.setAttribute('src', event.target.dataset.fullview);
     
-    MakeAccentImg(previewImgs, event);
+    MakeAccentImg(arrOfpreviewImgs, event);
   }
 
   
-  function MakeAccentImg (previewImgs, event){
-    previewImgs.forEach(el =>{
+  function MakeAccentImg (arrOfpreviewImgs, event){
+    arrOfpreviewImgs.forEach(el =>{
     if(el !== event.target){
       el.classlist.remove('js-preview-active-img');
     } else{
       el.classlist.add('js-preview-active-img');
+        
     }
   });
 }
