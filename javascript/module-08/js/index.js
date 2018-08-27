@@ -121,7 +121,7 @@ const galleryItems = [{
   console.log(preview);
 
   
-  gallery.addEventListener('click', function (e) {
+  gallery.lastElementChild.addEventListener('click', function (e) {
     if (event.target.nodeName !== "IMG") return;
     const imgFullview = gallery.querySelector('.fullview-img');
     imgFullview.setAttribute('src', event.target.dataset.fullview);
