@@ -54,13 +54,14 @@ const listOfLaps = document.querySelector('.js-laps');
 let isActive = false;
 let id = null;
 let startTime = 0;
-  let deltaTime = 0;
+let deltaTime = 0;
+resetBtn.setAttribute('disabled', '');
 
 function startTimer() {
-  if (isActive) return; 
-  
+  if (isActive) return;
+
   isActive = true;
-  startTime = Date.now();
+  startTime = Date.now() - deltaTime;
   id = setInterval(() => {
     const currentTime = Date.now();
     deltaTime = currentTime - startTime;
@@ -90,32 +91,44 @@ function updateClockface(time) {
 
 }
 
-function handleOnstartTimer(){
-  if(!isActive){
+function handleOnstartTimer() {
+  resetBtn['disabled'] = false;
+  if (!isActive) {
     startTimer();
     startBtn.textContent = 'Pause';
-    
-  } else{
+
+  } else {
     stopPauseTimer();
     startBtn.textContent = 'Continue';
-    const timeOnPause = Date.now();
-    console.log(timeOnPause);
-    const continueTime= timeOnPause - deltaTime;
-    console.log(continueTime);
   }
+
+}
+
+function stopPauseTimer() {
+  clearInterval(id);
+  isActive = false;
+}
+
+function handleOnReset() {
+ deleteListOfLaps ();  
+  stopPauseTimer();
+  deltaTime = 0;
+  updateClockface(deltaTime);
+}
+
+function handleOnLap(){
+  const lap = document.createElement('li');
+  lap.textContent = clockface.textContent;
+  listOfLaps.append(lap);
+}
+
+function deleteListOfLaps (){
+  const laps = document.querySelectorAll('li');
+  laps.forEach(lap => {
+    lap.remove();
+  })
 }
 
 startBtn.addEventListener('click', handleOnstartTimer);
-
-function stopPauseTimer() {
-    clearInterval(id);
-    isActive = false;
-  }
-
-  function handleOnReset(){
-    stopPauseTimer();
-    deltaTime = 0;
-    updateClockface(deltaTime);
-  }
-resetBtn.addEventListener('click', handleOnReset)
-
+resetBtn.addEventListener('click', handleOnReset);
+lapBtn.addEventListener('click', handleOnLap);
