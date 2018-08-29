@@ -114,6 +114,9 @@ function handleOnReset() {
   stopPauseTimer();
   deltaTime = 0;
   updateClockface(deltaTime);
+  startBtn.textContent = 'Start';
+  resetBtn.setAttribute('disabled', '');
+
 }
 
 function handleOnLap(){
