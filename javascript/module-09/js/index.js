@@ -56,6 +56,8 @@ let id = null;
 let startTime = 0;
 let deltaTime = 0;
 resetBtn.setAttribute('disabled', '');
+resetBtn.style.opacity = '0.5';
+resetBtn.style.cursor = 'no-drop';
 
 function startTimer() {
   if (isActive) return;
@@ -93,7 +95,9 @@ function updateClockface(time) {
 
 function handleOnstartTimer() {
   resetBtn['disabled'] = false;
-  if (!isActive) {
+  resetBtn.style.opacity = '1';
+  resetBtn.style.cursor = 'auto';
+    if (!isActive) {
     startTimer();
     startBtn.textContent = 'Pause';
 
@@ -116,6 +120,9 @@ function handleOnReset() {
   updateClockface(deltaTime);
   startBtn.textContent = 'Start';
   resetBtn.setAttribute('disabled', '');
+  resetBtn.style.opacity = '0.5';
+  resetBtn.style.cursor = 'no-drop';
+  
 
 }
 

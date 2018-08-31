@@ -1,46 +1,50 @@
-.stopwatch{
+.stopwatch {
     width: 700px;
     margin: 30px auto 0px;
-border: 5px solid #FF7043;
-border-radius: 10px;
+    border: 5px solid #FF7043;
+    border-radius: 10px;
+    background-color: #FFF8E1;
 }
 
-.time{
+.time {
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 92px;
+    font-family: 'VT323', monospace;
+    font-size: 140px;
 }
-.buttons{
+
+.buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.btn-start, .btn-lap, .btn-reset{
+.btn-start,
+.btn-lap,
+.btn-reset {
     padding: 20px 40px;
     color: #FAFAFA;
     font-family: 'Poppins', sans-serif;
     font-size: 42px;
     border-radius: 30px;
-    border: 2px solid #795548;
+    border: 2px solid #212121;
     outline: none;
 }
 
-.btn-start{
+.btn-start {
     background-color: #2E7D32;
 }
 
-.btn-lap{
+.btn-lap {
     background-color: #FF8F00;
 }
 
-.btn-reset{
+.btn-reset {
     background-color: #c62828;
 }
 
-.laps{
-    width: 700px;
+.laps {
+    width: 600px;
     margin: 30px auto 0px;
     font-family: 'Poppins', sans-serif;
     font-size: 42px;
