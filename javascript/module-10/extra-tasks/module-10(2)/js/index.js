@@ -23,12 +23,13 @@ const getBtn = document.querySelector(".js-get");
 const result = document.querySelector(".result");
 const tBody = document.querySelector("table > tbody");
 
-getBtn.addEventListener("click", handleOnClick);
+getBtn.addEventListener("submit", handleOnClick);
 
 /*
   @param {FormEvent} evt
 */
 function fetchUsers() {
+    evt.preventDefault();
     return fetch('https://test-users-api.herokuapp.com/users/')
         .then(response => {
             if (response.ok) return response.json();
