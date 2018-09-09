@@ -19,11 +19,11 @@
     id | name | age  
 */
 
-const getBtn = document.querySelector(".js-get");
+const form = document.querySelector(".search-form");
 const result = document.querySelector(".result");
 const tBody = document.querySelector("table > tbody");
 
-getBtn.addEventListener("submit", handleOnSubmit);
+form.addEventListener("submit", handleOnSubmit);
 
 /*
   @param {FormEvent} evt
@@ -41,7 +41,8 @@ function fetchUsers() {
 };
 
 function updateView(users) {
-    const htmlString = users.reduce((acc, user) => acc + createTableRow(user),
+    const arr = users.data;
+    const htmlString = arr.reduce((acc, user) => acc + createTableRow(user),
         "");
     tBody.innerHTML = htmlString;
 }
