@@ -23,14 +23,14 @@ const getBtn = document.querySelector(".js-get");
 const result = document.querySelector(".result");
 const tBody = document.querySelector("table > tbody");
 
-getBtn.addEventListener("submit", handleOnClick);
+getBtn.addEventListener("submit", handleOnSubmit);
 
 /*
   @param {FormEvent} evt
 */
 function fetchUsers() {
-    evt.preventDefault();
-    return fetch('https://test-users-api.herokuapp.com/users/')
+
+    return fetch('https://test-users-api.herokuapp.com/users')
         .then(response => {
             if (response.ok) return response.json();
             throw new Error("Error fetching data");
@@ -41,12 +41,13 @@ function fetchUsers() {
 };
 
 function updateView(users) {
-    const htmlString = users.reduce((acc, user) => acc + createTable(user),
+    const htmlString = users.reduce((acc, user) => acc + createTableRow(user),
         "");
     tBody.innerHTML = htmlString;
 }
 
-function handleOnClick() {
+function handleOnSubmit(e) {
+   e.preventDefault();
     fetchUsers().then(updateView);
 }
 
