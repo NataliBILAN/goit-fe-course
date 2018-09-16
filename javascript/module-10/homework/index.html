@@ -33,7 +33,7 @@
         <div class="flex-wrapper">
             <div>
                 <form class="js-user-by-id" action="#">
-                    <input class="user-by-id" type="text" name="id" placeholder="Enter user id">
+                    <input class="user-by-id" type="text" name="id" placeholder="Enter user id" required>
                     <button class="button js-btn-user-by-id" type="submit">Get user by ID</button>
                 </form>
                 <p class="result-user-by-id">User by ID</p>
@@ -42,8 +42,8 @@
 
             <div class="add-user">
                 <form class="js-add-user" action="#">
-                    <input class="new-name" type="text" name="name" placeholder="Enter new user name">
-                    <input class="new-age" type="number" name="age" placeholder="Enter new user age">
+                    <input class="new-name" type="text" name="name" placeholder="Enter new user name" required>
+                    <input class="new-age" type="number" name="age" placeholder="Enter new user age" required>
                     <button class="button" type="submit">Add new user</button>
                     <p class="result-new-user">Feedback</p>
                 </form>
@@ -52,7 +52,7 @@
 
             <div class="remove-user">
                 <form class="js-remove-user" action="#">
-                    <input class="id-remove" type="text" name="id" placeholder="Enter user id">
+                    <input class="id-remove" type="text" name="id" placeholder="Enter user id" required>
                     <button class="button" type="submit">Remove user by ID</button>
                     <p class="result-remove-user">Feedback</p>
                 </form>
@@ -61,9 +61,9 @@
 
             <div class="udate-user">
                 <form class="js-update-user" action="#">
-                    <input class="input-update-id" type="text" name="id" placeholder="Enter user id">
-                    <input class="input-update-name" type="text" name="name" placeholder="Enter update name">
-                    <input class="input-update-age" type="text" name="age" placeholder="Enter update age">
+                    <input class="input-update-id" type="text" name="id" placeholder="Enter user id" required>
+                    <input class="input-update-name" type="text" name="name" placeholder="Enter update name" required>
+                    <input class="input-update-age" type="text" name="age" placeholder="Enter update age" required>
                     <button class="button" type="submit">Update user</button>
                     <p class="result-update">Feedback</p>
                 </form>
