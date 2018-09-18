@@ -141,23 +141,35 @@ function fetchNewUser() {
 //- функция должна удалять из БД юзера по указанному id.
 refs.formRemoveUser.addEventListener("submit", handleRemoveUser);
 
-function handleRemoveUser(e) {
+
+function handleRemoveUser(e){
   e.preventDefault();
-  fetchRemoveUser();
-  updateAfterRemoving();
+// findUserForRemove();
+ fetchUsers().then(findUserForRemove);
+}
+    
+ function findUserForRemove(info) {
+ // console.log(info.data);
+ const arr = info.data;
+ const user = arr.find(el => el.id === refs.inputRemoveUser.value);
+ console.log(user);
+ if (user === undefined) {
+   refs.resultRemoveUser.textContent=`User ${refs.inputRemoveUser.value} isn't found`
+ } else {
+fetchRemoveUser();
+updateAfterRemoving();}
 }
 
-function updateAfterRemoving() {
-  refs.resultRemoveUser.textContent = `User ${refs.inputRemoveUser.value} successfully deleted`
+function updateAfterRemoving(){
+ refs.resultRemoveUser.textContent=`User ${refs.inputRemoveUser.value} successfully deleted`
 }
 
-function fetchRemoveUser() {
-  fetch(`https://test-users-api.herokuapp.com/users/${refs.inputRemoveUser.value}`, {
-      method: "DELETE"
-    })
-    .then(response => response.json())
-    .catch(error => console.log('ERROR' + error));
+function fetchRemoveUser(){
+fetch(`https://test-users-api.herokuapp.com/users/${refs.inputRemoveUser.value}`, {method: "DELETE"})
+.then(response => response.json())
+ .catch(error => console.log('ERROR' + error));
 }
+
 
 //  - функция должна обновлять данные пользователя по id. 
 refs.formUpdate.addEventListener("submit", handleUpdate);
