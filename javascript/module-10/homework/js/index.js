@@ -98,11 +98,11 @@ function handleGetUserById(e) {
 
 function findUserById(info) {
   const array = info.data;
-  const user = array.find(el => el.id == refs.inputUserById.value);
-  if (user == undefined) {
+  const user = array.find(el => el.id === refs.inputUserById.value);
+  if (user === undefined) {
     refs.resultUserById.textContent = `Такого пользователя нет!`;
-  }
-  refs.resultUserById.innerHTML = `<ul>
+  } else
+    refs.resultUserById.innerHTML = `<ul>
                <li>ID: ${user.id}</li>
                <li>Name: ${user.name}</li>
               <li>Age: ${user.age}</li>;
@@ -142,32 +142,35 @@ function fetchNewUser() {
 refs.formRemoveUser.addEventListener("submit", handleRemoveUser);
 
 
-function handleRemoveUser(e){
+function handleRemoveUser(e) {
   e.preventDefault();
-// findUserForRemove();
- fetchUsers().then(findUserForRemove);
-}
-    
- function findUserForRemove(info) {
- // console.log(info.data);
- const arr = info.data;
- const user = arr.find(el => el.id === refs.inputRemoveUser.value);
- console.log(user);
- if (user === undefined) {
-   refs.resultRemoveUser.textContent=`User ${refs.inputRemoveUser.value} isn't found`
- } else {
-fetchRemoveUser();
-updateAfterRemoving();}
+  // findUserForRemove();
+  fetchUsers().then(findUserForRemove);
 }
 
-function updateAfterRemoving(){
- refs.resultRemoveUser.textContent=`User ${refs.inputRemoveUser.value} successfully deleted`
+function findUserForRemove(info) {
+  // console.log(info.data);
+  const arr = info.data;
+  const user = arr.find(el => el.id === refs.inputRemoveUser.value);
+
+  if (user === undefined) {
+    refs.resultRemoveUser.textContent = `User ${refs.inputRemoveUser.value} isn't found`
+  } else {
+    fetchRemoveUser();
+    updateAfterRemoving();
+  }
 }
 
-function fetchRemoveUser(){
-fetch(`https://test-users-api.herokuapp.com/users/${refs.inputRemoveUser.value}`, {method: "DELETE"})
-.then(response => response.json())
- .catch(error => console.log('ERROR' + error));
+function updateAfterRemoving() {
+  refs.resultRemoveUser.textContent = `User ${refs.inputRemoveUser.value} successfully deleted`
+}
+
+function fetchRemoveUser() {
+  fetch(`https://test-users-api.herokuapp.com/users/${refs.inputRemoveUser.value}`, {
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .catch(error => console.log('ERROR' + error));
 }
 
 
@@ -176,8 +179,20 @@ refs.formUpdate.addEventListener("submit", handleUpdate);
 
 function handleUpdate(e) {
   e.preventDefault();
-  fetchUpdate();
-  updateUser();
+  fetchUsers().then(findUserForUpdate);
+}
+
+function findUserForUpdate(info) {
+  // console.log(info.data);
+  const arr = info.data;
+  const user = arr.find(el => el.id === refs.inputUpdateId.value);
+
+  if (user === undefined) {
+    refs.resultUpdate.textContent = `User ${refs.inputUpdateId.value} isn't found`
+  } else {
+    fetchUpdate();
+    updateUser();
+  }
 }
 
 function updateUser() {
