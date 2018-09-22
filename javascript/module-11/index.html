@@ -32,12 +32,12 @@
                     <li><label><input type="checkbox" name="release_date" value="2017"> 2017</label></li>
                   </ul>
                 </section>
-                <button type="submit">Filter</button>
-                <button type="reset">Clear</button>
+                <button class="filter" type="submit">Filter</button>
+                <button class="clear" type="reset">Clear</button>
               </form>
-
+              <div id="root">
               <template id="template-card">
-                  <div id="root">
+                 
                       <div class="card">
                           <p>Name:{{name}}</p>
                           <img src="{{img}}" alt="">
@@ -46,10 +46,10 @@
                           <p>Price: {{price}}</p>
                           <p>Realise Date: {{release_date}}</p>
                       </div>
-                   </div>
+                
               </template>
-            </body>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js "></script>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js "></script>
     <script src="js/index.js"></script>
-
+</body>
 </html>

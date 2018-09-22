@@ -120,6 +120,19 @@ const laptops = [
     },
   ];
 
+  const filter = { 
+    size: [],
+    color: [],
+    release_date: []
+ }
+ const btnFilter = document.querySelector('.filter');
+ const btnClear = document.querySelector('.clear');
+
+
+ const filteredLaptops = laptops.filter(el=> el.size ===  15);
+ console.log(filteredLaptops);
+  
+
 const sourse = document.querySelector('#template-card').innerHTML.trim();
 // console.log(sourse);
 const template = Handlebars.compile(sourse);
