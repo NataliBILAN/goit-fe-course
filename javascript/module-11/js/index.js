@@ -127,11 +127,25 @@ const laptops = [
  }
  const btnFilter = document.querySelector('.filter');
  const btnClear = document.querySelector('.clear');
+ const form = document.querySelector ('.js-form')
 
+ form.addEventListener('submit', handleOnFilter);
 
- const filteredLaptops = laptops.filter(el=> el.size ===  15);
- console.log(filteredLaptops);
-  
+function handleOnFilter(evt){
+  evt.preventDefault();
+// const checkedSize = document.querySelectorAll("input:checked");
+const checkedSize = Array.from(document.querySelectorAll("input:checked"));
+console.log(checkedSize);
+filter.size = checkedSize;
+console.log(filter);
+
+console.log(checkedSize.value);
+  const filteredLaptops = laptops.filter(el=>el.size === checkedSize.value);
+  debugger
+  console.log(filteredLaptops);
+}
+// const checkedSize = Array.from(document.querySelectorAll("input:checked"));
+// // const filteredLaptops = laptops.filter(({size, color, release_date}) => size === checkedSize.value);
 
 const sourse = document.querySelector('#template-card').innerHTML.trim();
 // console.log(sourse);
@@ -139,7 +153,8 @@ const template = Handlebars.compile(sourse);
 // console.log(template);
 const markup = laptops.reduce((acc, item) => acc + template(item), '');
 
-console.log(markup);
+// console.log(markup);
 const parent = document.querySelector('#root');
 parent.insertAdjacentHTML('afterBegin', markup);
 
+// & el.color ===  'black' & el.release_date === 2017
