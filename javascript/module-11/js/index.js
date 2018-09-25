@@ -120,11 +120,7 @@ const laptops = [
     },
   ];
 
-  const filter = { 
-    size: [],
-    color: [],
-    release_date: []
- }
+  
  const btnFilter = document.querySelector('.filter');
  const btnClear = document.querySelector('.clear');
  const form = document.querySelector ('.js-form')
@@ -133,17 +129,44 @@ const laptops = [
 
 function handleOnFilter(evt){
   evt.preventDefault();
-// const checkedSize = document.querySelectorAll("input:checked");
-const checkedSize = Array.from(document.querySelectorAll("input:checked"));
-console.log(checkedSize);
-filter.size = checkedSize;
-console.log(filter);
 
-console.log(checkedSize.value);
-  const filteredLaptops = laptops.filter(el=>el.size === checkedSize.value);
-  debugger
-  console.log(filteredLaptops);
-}
+  const filter = { 
+    size: [],
+    color: [],
+    release_date: []
+ }
+// '.js-size input[type=checked]'
+const checkedSize = document.querySelectorAll("input:checked");
+function createArray (arr){
+for(var i = 0; i < arr.length; i+=1){
+  if(arr[i] === arr[i]){
+    return
+  }
+} filter.size.push(arr[i].value);
+
+  // const choices = checked.value;
+  // const filteredLaptops = laptops.filter(el=>el.size === choices);  
+    
+  console.log(filter.size);
+}}
+
+// function filter(filter,laptops){
+//   let result=[]; 
+//   laptops.forEach(el=>{
+//       if(el=>el.size === filter.size)
+//         result.push(el)
+//     })
+//   return result;
+//   }
+// console.log(filter);  
+
+  // function filterSize (){
+  //   const filteredLaptops = laptops.filter(el=>el.size === choices);
+  //   console.log(filteredLaptops);
+  // }
+  // filterSize();
+  // debugger
+
 // const checkedSize = Array.from(document.querySelectorAll("input:checked"));
 // // const filteredLaptops = laptops.filter(({size, color, release_date}) => size === checkedSize.value);
 
