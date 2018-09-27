@@ -131,13 +131,19 @@ function handleOnFilter(evt) {
   console.log(checkedSize);
 
   checkedSize.forEach(function (element) {
-    filter.size.push(element.value);
+    if (element.checked) {
+      filter.size.push(Number(element.value))
+    }
   });
   checkedColor.forEach(function (element) {
-    filter.color.push(element.value);
+    if (element.checked) {
+      filter.color.push(element.value);
+    }
   });
   checkedReleaseDate.forEach(function (element) {
-    filter.release_date.push(element.value);
+    if (element.checked) {
+      filter.release_date.push(Number(element.value));
+    }
   });
 
   console.log(filter);
@@ -147,6 +153,7 @@ function handleOnFilter(evt) {
     }
     return acc;
   }, [...laptops])
+  console.log(filteredLaptops);
 
 
 
@@ -154,7 +161,7 @@ function handleOnFilter(evt) {
   const template = Handlebars.compile(sourse);
   const markup = filteredLaptops.reduce((acc, item) => acc + template(item), '');
   const parent = document.querySelector('#root');
-  parent.insertAdjacentHTML('afterBegin', markup);
+  parent.innerHTML = markup;
 
-  debugger
+
 }
