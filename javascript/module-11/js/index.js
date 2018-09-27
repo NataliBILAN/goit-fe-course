@@ -27,157 +27,134 @@
 
 
 
-const laptops = [
-    {
-      size: 13,
-      color: 'white',
-      price: 28000,
-      release_date: 2015,
-      name: 'Macbook Air White 13"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 13,
-      color: 'gray',
-      price: 32000,
-      release_date: 2016,
-      name: 'Macbook Air Gray 13"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 13,
-      color: 'black',
-      price: 35000,
-      release_date: 2017,
-      name: 'Macbook Air Black 13"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 15,
-      color: 'white',
-      price: 45000,
-      release_date: 2015,
-      name: 'Macbook Air White 15"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 15,
-      color: 'gray',
-      price: 55000,
-      release_date: 2016,
-      name: 'Macbook Pro Gray 15"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 15,
-      color: 'black',
-      price: 45000,
-      release_date: 2017,
-      name: 'Macbook Pro Black 15"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 17,
-      color: 'white',
-      price: 65000,
-      release_date: 2015,
-      name: 'Macbook Air White 17"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 17,
-      color: 'gray',
-      price: 75000,
-      release_date: 2016,
-      name: 'Macbook Pro Gray 17"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-    {
-      size: 17,
-      color: 'black',
-      price: 80000,
-      release_date: 2017,
-      name: 'Macbook Pro Black 17"',
-      img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
-      descr:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
-    },
-  ];
+const laptops = [{
+    size: 13,
+    color: 'white',
+    price: 28000,
+    release_date: 2015,
+    name: 'Macbook Air White 13"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 13,
+    color: 'gray',
+    price: 32000,
+    release_date: 2016,
+    name: 'Macbook Air Gray 13"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 13,
+    color: 'black',
+    price: 35000,
+    release_date: 2017,
+    name: 'Macbook Air Black 13"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 15,
+    color: 'white',
+    price: 45000,
+    release_date: 2015,
+    name: 'Macbook Air White 15"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 15,
+    color: 'gray',
+    price: 55000,
+    release_date: 2016,
+    name: 'Macbook Pro Gray 15"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 15,
+    color: 'black',
+    price: 45000,
+    release_date: 2017,
+    name: 'Macbook Pro Black 15"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 17,
+    color: 'white',
+    price: 65000,
+    release_date: 2015,
+    name: 'Macbook Air White 17"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 17,
+    color: 'gray',
+    price: 75000,
+    release_date: 2016,
+    name: 'Macbook Pro Gray 17"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+  {
+    size: 17,
+    color: 'black',
+    price: 80000,
+    release_date: 2017,
+    name: 'Macbook Pro Black 17"',
+    img: 'http://demo.posthemes.com/pos_zadademo/images/placeholder.png',
+    descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
+  },
+];
 
-  
- const btnFilter = document.querySelector('.filter');
- const btnClear = document.querySelector('.clear');
- const form = document.querySelector ('.js-form')
 
- form.addEventListener('submit', handleOnFilter);
+const btnFilter = document.querySelector('.filter');
+const btnClear = document.querySelector('.clear');
+const form = document.querySelector('.js-form')
+const checkedSize = document.querySelectorAll('.js-size input[type=checkbox]');
+const checkedColor = document.querySelectorAll('.js-color input[type=checkbox]');
+const checkedReleaseDate = document.querySelectorAll('.js-release-date input[type=checkbox]');
 
-function handleOnFilter(evt){
+const filter = {
+  size: [],
+  color: [],
+  release_date: []
+}
+
+form.addEventListener('submit', handleOnFilter);
+
+function handleOnFilter(evt) {
   evt.preventDefault();
+  console.log(checkedSize);
 
-  const filter = { 
-    size: [],
-    color: [],
-    release_date: []
- }
-// '.js-size input[type=checked]'
-const checkedSize = document.querySelectorAll("input:checked");
-function createArray (arr){
-for(var i = 0; i < arr.length; i+=1){
-  if(arr[i] === arr[i]){
-    return
-  }
-} filter.size.push(arr[i].value);
+  checkedSize.forEach(function (element) {
+    filter.size.push(element.value);
+  });
+  checkedColor.forEach(function (element) {
+    filter.color.push(element.value);
+  });
+  checkedReleaseDate.forEach(function (element) {
+    filter.release_date.push(element.value);
+  });
 
-  // const choices = checked.value;
-  // const filteredLaptops = laptops.filter(el=>el.size === choices);  
-    
-  console.log(filter.size);
-}}
+  console.log(filter);
+  const filteredLaptops = Object.keys(filter).reduce((acc, key) => {
+    if (filter[key].length) {
+      return acc.filter(el => filter[key].includes(el[key]))
+    }
+    return acc;
+  }, [...laptops])
 
-// function filter(filter,laptops){
-//   let result=[]; 
-//   laptops.forEach(el=>{
-//       if(el=>el.size === filter.size)
-//         result.push(el)
-//     })
-//   return result;
-//   }
-// console.log(filter);  
 
-  // function filterSize (){
-  //   const filteredLaptops = laptops.filter(el=>el.size === choices);
-  //   console.log(filteredLaptops);
-  // }
-  // filterSize();
-  // debugger
 
-// const checkedSize = Array.from(document.querySelectorAll("input:checked"));
-// // const filteredLaptops = laptops.filter(({size, color, release_date}) => size === checkedSize.value);
+  const sourse = document.querySelector('#template-card').innerHTML.trim();
+  const template = Handlebars.compile(sourse);
+  const markup = filteredLaptops.reduce((acc, item) => acc + template(item), '');
+  const parent = document.querySelector('#root');
+  parent.insertAdjacentHTML('afterBegin', markup);
 
-const sourse = document.querySelector('#template-card').innerHTML.trim();
-// console.log(sourse);
-const template = Handlebars.compile(sourse);
-// console.log(template);
-const markup = laptops.reduce((acc, item) => acc + template(item), '');
-
-// console.log(markup);
-const parent = document.querySelector('#root');
-parent.insertAdjacentHTML('afterBegin', markup);
-
-// & el.color ===  'black' & el.release_date === 2017
+  debugger
+}
