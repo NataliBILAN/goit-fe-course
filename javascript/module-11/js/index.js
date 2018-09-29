@@ -113,10 +113,11 @@ const laptops = [{
 
 const btnFilter = document.querySelector('.filter');
 const btnClear = document.querySelector('.clear');
-const form = document.querySelector('.js-form')
-const checkedSize = document.querySelectorAll('.js-size input[type=checkbox]');
-const checkedColor = document.querySelectorAll('.js-color input[type=checkbox]');
-const checkedReleaseDate = document.querySelectorAll('.js-release-date input[type=checkbox]');
+const form = document.querySelector('.js-form');
+const choices = document.querySelectorAll('.js-form input[type=checkbox]');
+// const checkedSize = document.querySelectorAll('.js-size input[type=checkbox]');
+// const checkedColor = document.querySelectorAll('.js-color input[type=checkbox]');
+// const checkedReleaseDate = document.querySelectorAll('.js-release-date input[type=checkbox]');
 
 const filter = {
   size: [],
@@ -128,33 +129,40 @@ form.addEventListener('submit', handleOnFilter);
 
 function handleOnFilter(evt) {
   evt.preventDefault();
-  console.log(checkedSize);
+  console.log(choices);
 
-  checkedSize.forEach(function (element) {
-    if (element.checked) {
-      filter.size.push(Number(element.value))
-    }
-  });
-  checkedColor.forEach(function (element) {
-    if (element.checked) {
-      filter.color.push(element.value);
-    }
-  });
-  checkedReleaseDate.forEach(function (element) {
-    if (element.checked) {
-      filter.release_date.push(Number(element.value));
-    }
-  });
+  choices.forEach(function (element) {
+  const name = element.getAttribute('name');
+  const checkboxValue = name == 'color' ? element.value : Number(element.value);
+  if (element.checked) {
+    filter[name].push(checkboxValue);
+  }
+});
+
+  // checkedSize.forEach(function (element) {
+  //   if (element.checked) {
+  //     filter.size.push(Number(element.value))
+  //   }
+  // });
+  // checkedColor.forEach(function (element) {
+  //   if (element.checked) {
+  //     filter.color.push(element.value);
+  //   }
+  // });
+  // checkedReleaseDate.forEach(function (element) {
+  //   if (element.checked) {
+  //     filter.release_date.push(Number(element.value));
+  //   }
+  // });
 
   console.log(filter);
   const filteredLaptops = Object.keys(filter).reduce((acc, key) => {
     if (filter[key].length) {
-      return acc.filter(el => filter[key].includes(el[key]))
+      return laptops.filter(el => filter[key].includes(el[key]))
     }
     return acc;
-  }, [...laptops])
+  },[])
   console.log(filteredLaptops);
-
 
 
   const sourse = document.querySelector('#template-card').innerHTML.trim();
