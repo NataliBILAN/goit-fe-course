@@ -133,11 +133,12 @@ function handleOnFilter(evt) {
 
   choices.forEach(function (element) {
   const name = element.getAttribute('name');
-  const checkboxValue = name == 'color' ? element.value : Number(element.value);
+   const checkboxValue = name == 'color' ? element.value : Number(element.value);
   if (element.checked) {
     filter[name].push(checkboxValue);
   }
-});
+}); 
+
 
   // checkedSize.forEach(function (element) {
   //   if (element.checked) {
@@ -156,12 +157,13 @@ function handleOnFilter(evt) {
   // });
 
   console.log(filter);
+
   const filteredLaptops = Object.keys(filter).reduce((acc, key) => {
     if (filter[key].length) {
-      return laptops.filter(el => filter[key].includes(el[key]))
+      return acc.filter(el => filter[key].includes(el[key]))
     }
     return acc;
-  },[])
+  }, laptops)
   console.log(filteredLaptops);
 
 
