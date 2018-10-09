@@ -7,19 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="#" class="js-form">
-        <input type="text" name="url" class="js-input">
-        <button type="submit" class="js-add">Add new tab</button>
-      </form>
-      <div class="root"></div>
-      <template id="tab">
-          <div class="card">
-            <p>{{newTab}}</p>
-            <button class="js-delete">Delete</button>
-          </div>
-        </template>
+  <form action="#" class="js-form form">
+    <input type="text" name="url" class="js-input">
+    <button type="submit" class="js-add button-add">Add new tab</button>
+  </form>
+  <div class="root"></div>
+  <template id="tab">
+      <div class="card">
+        <p class="js-url">URL:{{url}}</p>
+        <p>Description:{{title}}</p>
+        <img src="{{image}}" alt="">
+        <button class="js-delete">Delete</button>
+      </div>
+    </template>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js "></script>
-  <script src="js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js "></script>
+<script src="js/index.js"></script>
 </body>
 </html>
