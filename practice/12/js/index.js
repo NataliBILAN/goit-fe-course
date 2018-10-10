@@ -45,7 +45,6 @@ const buttonDelete = document.querySelector('.js-delete');
 const parent = document.querySelector('.root');
 const validUrl =/^((ftp|http|https):\/\/)?(www\.|)([A-z|0-9]+)\.([A-z]{2,})/;
 
-
 const sourse = document.querySelector('#tab').innerHTML.trim();
 const template = Handlebars.compile(sourse);
 
@@ -84,13 +83,19 @@ function fetchLink(newTab) {
       console.error("Error: ", error);
     });
 }
-
+ 
 function handleOnDelete(event){
   event.preventDefault();
   if (event.target.nodeName !== "BUTTON") return;
-  // const urlForDelete = document.querySelector('.js-url');
 
-  
+// console.log(localStorage);
+// console.log(Object.keys(localStorage)); 
+const urlForDelete = document.querySelector('.js-li-url');
+console.log(urlForDelete);
+const newKeys = Object.keys(localStorage)
+ console.log(newKeys);
+
+
   const tab = event.target.parentNode;
   tab.remove();
 }
