@@ -1,0 +1,38 @@
+
+.animate {
+	transition: all 0.1s;
+}
+
+.action-button {
+    padding: 10px 40px;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+    outline: transparent;
+}
+
+.action-button:active {
+	transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.red {
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
+
+.green {
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+}
+.card{
+    width: 600px;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: 1px solid #E74C3C;
+}
+.picture{
+    display: block;
+}
