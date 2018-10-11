@@ -29,6 +29,14 @@ function handleOnSubmit(event) {
     alert('Invalid URL!');
   }
 }
+console.log(Object.keys(localStorage));
+Object.keys(localStorage).forEach(el=>{
+  fetchLink(el).then(data => {
+    const markup = template(data);
+    parent.insertAdjacentHTML('afterbegin', markup)
+  }
+)}
+)
 
 function fetchLink(newTab) {
   return fetch(`https://api.linkpreview.net/?key=5bbc427db184bade881089c46d1ce94309e553dcca374&q=${newTab}`)
@@ -41,6 +49,8 @@ function fetchLink(newTab) {
     });
 }
 
+
+
 function handleOnDelete(event) {
   event.preventDefault();
   if (event.target.nodeName !== "BUTTON") return;
@@ -50,3 +60,4 @@ function handleOnDelete(event) {
   const tab = event.target.parentNode;
   tab.remove();
 }
+

@@ -30,6 +30,13 @@ function handleOnSubmit(event) {
     alert('Invalid URL!');
   }
 }
+console.log(Object.keys(localStorage));
+Object.keys(localStorage).forEach(function (el) {
+  fetchLink(el).then(function (data) {
+    var markup = template(data);
+    parent.insertAdjacentHTML('afterbegin', markup);
+  });
+});
 
 function fetchLink(newTab) {
   return fetch('https://api.linkpreview.net/?key=5bbc427db184bade881089c46d1ce94309e553dcca374&q=' + newTab).then(function (response) {
