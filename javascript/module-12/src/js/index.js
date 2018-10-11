@@ -31,7 +31,7 @@ function handleOnSubmit(event) {
 }
 
 function fetchLink(newTab) {
-  return fetch(`http://api.linkpreview.net/?key=5bbc427db184bade881089c46d1ce94309e553dcca374&q=${newTab}`)
+  return fetch(`https://api.linkpreview.net/?key=5bbc427db184bade881089c46d1ce94309e553dcca374&q=${newTab}`)
     .then(response => {
       if (response.ok) return response.json();
       throw new Error("Error fetching data");
