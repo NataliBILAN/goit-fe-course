@@ -1,5 +1,6 @@
 .wrapper {
     margin:0 auto;
+    width: 100%;
 }
 h2{
     margin-top: 0;
@@ -89,8 +90,8 @@ nav {
 
 .start h2 {
     /* display: flex; */
-    flex-direction: column;
-    justify-content: space-between;
+    /* flex-direction: column;
+    justify-content: space-between; */
     margin-bottom: 44px;
     line-height: 75px;
     font-family: 'Montserrat', sans-serif;
@@ -240,18 +241,6 @@ input[type=submit] {
     margin: 0 auto 50px;
 }
 
-.title-services h3 {
-    text-align: center;
-    margin: 0 auto;
-    font-family: Couture, sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 80px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    color: #161616;
-
-}
 
 .title-services span {
     color: #d03958;
@@ -315,6 +304,7 @@ input[type=submit] {
 
 .our-story p {
     margin: 0;
+    padding: 15px;
     color: #ffffff;
     font-family: 'PT Serif', sans-serif;
     font-size: 20px;
@@ -356,7 +346,8 @@ input[type=submit] {
     background-color: #e3d5b8;
 }
 
-.pricing h3 {
+.title-services h3,.pricing h3, .testimonials h3,
+.gallery h3 {
     margin-top: 0;
     color: #1f1f1f;
     font-family: 'Montserrat', sans-serif;
@@ -365,6 +356,15 @@ input[type=submit] {
     line-height: 80px;
     text-transform: uppercase;
     letter-spacing: -1px;
+}
+
+.title-services h3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+.testimonials h3,
+.gallery h3 {
+    text-align: center;
 }
 
 .pricing-content {
@@ -376,9 +376,10 @@ input[type=submit] {
 .option {
     display: flex;
     flex-direction: column;
-    width: 28%;
+    flex: 0 0 30%;
+    margin:0 10px 20px;
     justify-content: space-around;
-      padding: 30px 20px;
+    padding: 90px 20px;
     background-color: #ffffff;
     border-radius: 6px;
 }
@@ -408,7 +409,7 @@ input[type=submit] {
 
 .option p {
     text-align: center;
-    margin: auto;
+    margin: 0 auto 40px;
     color: #161616;
     font-family: 'PT Serif', sans-serif;
     font-size: 20px;
@@ -421,7 +422,7 @@ input[type=submit] {
 .business,
 .professional {
     display: block;
-    margin: auto;
+    margin: 0 auto;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
@@ -458,53 +459,34 @@ input[type=submit] {
 .pictures {
     display: flex;
     justify-content: center;
-    padding-top: 140px;
-    padding-bottom: 116px;
+    padding: 140px 40px 116px;
     background-color: #ECEFF1;
 }
 
 .pictures-content {
     display: flex;
     justify-content: space-between;
-    /* height: 430px; */
-    /* width: 80%; */
+    width: 80%;
 }
 
-.testimonial {
+.testimonials {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* width: 50%; */
-
-
+    flex: 1 0 50%;
 }
 
-.testimonial h3,
-.gallery h3 {
-    display: inline-block;
-    margin-top: 0;
-    text-align: center;
-    color: #1f1f1f;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 80px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-
-.description p {
-
+.first-name, .second-name {
     color: #d03958;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: -0.4px;
-}
+} 
 
-.description p:first-child {
-    margin-bottom: 22px;
+.testimonial-one, .testimonial-two {
+    margin: 0 0 22px;
     color: #161616;
     font-family: 'PT Serif', sans-serif;
     font-size: 20px;
@@ -513,13 +495,13 @@ input[type=submit] {
     letter-spacing: -0.4px;
 }
 
-.description {
-    width: 35%;
-    padding-left: 26px;
+.testimonial-one {
+    margin: 0 0 15px;
+    width: 83%;  
 }
 
 
-.testimonial img {
+.testimonials img {
     display: block;
     width: 105px;
     height: 105px;
@@ -529,14 +511,16 @@ input[type=submit] {
 
 .part-one {
     display: flex;
-    justify-content: space-between;
-
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.part-one p:last-child{
+    margin: 0;
 }
 
 .part-two {
     position: relative;
-    width: 439px;
-    height: 142px;
+    padding: 15px;
     background-color: #e3d5b8;
     border-radius: 6px;
 }
@@ -544,8 +528,8 @@ input[type=submit] {
 .part-two img {
     position: absolute;
     display: block;
-    top: 18px;
-    left: 394px;
+    top: 12px;
+    right: 20px;
 }
 
 
@@ -553,7 +537,7 @@ input[type=submit] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 45%;
+    flex:  1 0 50%;
 }
 
 .gallery h3 {
@@ -566,9 +550,9 @@ input[type=submit] {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    height: 280px;
+    list-style: none;
+    padding: 0 40px 0 90px;
 }
-
 .gallery a {
     display: block;
     width: 25%;
@@ -579,13 +563,16 @@ input[type=submit] {
     font-weight: 400;
     line-height: 28px;
     text-transform: uppercase;
-
     letter-spacing: -0.4px;
+}
+.pictures-list li{
+    flex: 25%;
+    margin: 2% 2% 30px 2%;
 }
 
 .pictures-list img {
-
     display: block;
+    max-width: 100%;
     width: 105px;
     height: 105px;
     box-shadow: -3px -10px 20px rgba(227, 213, 184, 0.6);
