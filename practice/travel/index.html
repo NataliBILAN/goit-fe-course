@@ -25,7 +25,7 @@
                         <li><a href="#about-nav">About</a></li>
                         <li><a href="#services-nav">Services</a></li>
                         <li><a href="#gallery-nav">Gallery</a></li>
-                        <li><a href="#" class="js-open-modal">Contact</a></li>
+                        <li><a href="#contact-nav">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -35,21 +35,7 @@
                         <h2><span>TRAVEL IS</span>BEAUTIFUL</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorum rerum optio quaerat repudiandae, voluptatem nisi reprehenderit. A quae illum eos, tempore ad provident totam iure illo ab!</p>
                     </div>
-<div class="modal js-modal-show">
-        <a class="js-close-modal">×</a>
-                    <form class="request" action="https://formspree.io/your@email.com" method="POST">
-                        <legend>REQUEST A QUOTE</legend>
-                        <input type="text" name="Full-Name" placeholder="Full Name" required>
-                        <input type="email" name="Email" placeholder="Email Adress" required>
-                        <input type="tel" name="Phone" placeholder="Phone Number" required>
-                        <input type="text" name="Country" placeholder="Country">
-                        <div class="accept">
-                            <input type="checkbox" name="accept" id="agree">
-                            <label for="agree"><span></span>I accept the terms & conditions</label>
-                        </div>
-                        <input type="submit" value="Send">
-                    </form>
-</div>
+
             </section>
 
         </div>
@@ -87,33 +73,36 @@
             <h3>PRICING</h3>
             <div class="pricing-content">
                 <div class="option">
-                    <p>Starter</p>
+                    <p class="choice">Starter</p>
                     <h4>FREE</h4>
+                    <div class="description">
                     <p>Free Service
-                        Multiple Accounts
-                        Management No
-                        --
-                        --</p>
+                    <p>Multiple Accounts</p> 
+                    <p>Management No</p> 
+                </div> 
                     <button class="starter">TRY</button>
                 </div>
                 <div class="option">
-                    <p>Business</p>
+                    <p class="choice">Business</p>
                     <h4>$97</h4>
+                    <div class="description">
                     <p>Free Service
-                        Multiple Accounts
-                        Management No
-                        Unlimited Data
-                        --</p>
+                    <p>Multiple Accounts</p> 
+                    <p>Management No</p>
+                    <p>Unlimited Data</p> 
+                </div>                
                     <button class="business">SIGN UP</button>
                 </div>
                 <div class="option">
-                    <p>Professional</p>
+                    <p class="choice">Professional</p>
                     <h4>$297</h4>
-                    <p>Free Service
-                        Multiple Accounts
-                        Management No
-                        Unlimited Data
-                        Whatever You Need</p>
+                    <div class="description">
+                    <p>Free Service</p>
+                    <p>Multiple Accounts</p>   
+                    <p>Management No</p>   
+                    <p>Unlimited Data</p> 
+                    <p> Whatever You Need</p>
+                </div>
                     <button class="professional">SIGN UP</button>
                 </div>
             </div>
@@ -131,9 +120,9 @@
                     </div>
 
                     <div class="part-two">
-                            <p class="testimonial-two">I have been involved with this comapny for ages and just .</p>
-                            <p class="second-name">DJ Bravo - Frequent Travelera</p>
+                            <p class="testimonial-two">Thanks for being the best travel agent. It's great working with you. Happy holidays to you and your family.We had yet another incredible time at the Fairmont. Our happy place.</p>
                             <img src="image/layer-6.png" alt="Frequent Travelera">
+                            <p class="second-name">DJ Bravo - Frequent Travelera</p>                         
                         </div>
                        
                     </div>
@@ -153,13 +142,22 @@
                     <a href="#">VIEW MORE PICTURES</a>
                 </div>
 
-            </div>
-
-
-        </section>
-
-
-        <footer id="contact-nav">
+            </section>
+          <section class="contact-us" id="contact-nav">
+                            <form class="request" action="https://formspree.io/your@email.com" method="POST">
+                                <legend>REQUEST A QUOTE</legend>
+                                <input type="text" name="Full-Name" placeholder="Full Name" required>
+                                <input type="email" name="Email" placeholder="Email Adress" required>
+                                <input type="tel" name="Phone" placeholder="Phone Number" required>
+                                <input type="text" name="Country" placeholder="Country">
+                                <div class="accept">
+                                    <input type="checkbox" name="accept" id="agree">
+                                    <label for="agree"><span></span>I accept the terms & conditions</label>
+                                </div>
+                                <input type="submit" value="Send">
+                            </form>
+                        </section>
+        <footer>
             <p>All Rights Reserved | 2018 | <span>Designed with love by DesignCoon</span></p>
             <a class="logo" href="#">Travel</a>
         </footer>
@@ -167,7 +165,7 @@
            
     </div>
 
-    <script src="js/index.js"></script>
+    
 </body>
 
 </html>
