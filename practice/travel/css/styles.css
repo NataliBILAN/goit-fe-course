@@ -1,3 +1,6 @@
+ul{
+margin: 0;
+}
 .wrapper {
     margin:0 auto;
     width: 100%;
@@ -559,7 +562,6 @@ input[type=submit]:hover{
 }
 .gallery a {
     display: block;
-    width: 25%;
     margin: auto;
     color: #d03958;
     font-family: 'Montserrat', sans-serif;
@@ -568,6 +570,11 @@ input[type=submit]:hover{
     line-height: 28px;
     text-transform: uppercase;
     letter-spacing: -0.4px;
+    text-decoration: none;
+}
+.gallery a:hover{
+    font-weight: 700;
+    text-decoration: underline;
 }
 .pictures-list li{
     flex: 25%;
