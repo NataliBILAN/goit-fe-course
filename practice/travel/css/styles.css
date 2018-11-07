@@ -573,7 +573,6 @@ input[type=submit]:hover{
     text-decoration: none;
 }
 .gallery a:hover{
-    font-weight: 700;
     text-decoration: underline;
 }
 .pictures-list li{
@@ -588,6 +587,11 @@ input[type=submit]:hover{
     height: 105px;
     box-shadow: -3px -10px 20px rgba(227, 213, 184, 0.6);
     border-radius: 50%;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.pictures-list img:hover{
+    transform: scale(1.1);
 }
 
 footer {
