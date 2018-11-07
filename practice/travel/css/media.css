@@ -1,10 +1,12 @@
 @media screen and (max-width: 480px) {
-    header{
+    header {
         display: block;
     }
-    .logo{
+
+    .logo {
         font-size: 56px;
     }
+
     .start h2 {
         font-size: 36px;
         line-height: 36px;
@@ -13,15 +15,19 @@
     .container-title {
         width: 70%;
     }
-    .title-services h3,.pricing h3, .testimonial h3,
+
+    .title-services h3,
+    .pricing h3,
+    .testimonial h3,
     .gallery h3 {
         font-size: 40px;
         font-weight: 700;
-        }
+    }
 
-        .option h4{
-            font-size: 36px;
-        }
+    .option h4 {
+        font-size: 36px;
+    }
+
     .list-services {
         flex-wrap: wrap;
     }
@@ -54,48 +60,65 @@
     .pricing {
         padding: 30px 10px 30px;
     }
-    .pictures{
+
+    .pictures {
         padding: 50px 40px 60px;
     }
+
     .pictures-content {
         flex-wrap: wrap;
         flex: 100%;
     }
 
-    .part-one, .part-two {
-         padding: 5px;
-         flex-direction: column;
+    .part-one,
+    .part-two {
+        padding: 5px;
+        flex-direction: column;
     }
-    .part-one, .part-two{
+
+    .part-one,
+    .part-two {
         margin-bottom: 40px;
     }
-    .testimonial-one, .testimonial-two{
+
+    .testimonial-one,
+    .testimonial-two {
         padding: 0;
     }
-    .pictures{
+
+    .pictures {
         flex-wrap: wrap;
     }
-    .pictures-list{
+
+    .pictures-list {
         flex-direction: column;
         flex-wrap: nowrap;
         padding: 0;
     }
-    .pictures-list li{
+
+    .pictures-list li {
         align-self: center;
     }
 }
 
-@media (min-width: 767px) and (max-width: 991px){
-    .option{
-       flex-direction: row;
-       flex-wrap: wrap;
+@media (min-width: 767px) and (max-width: 991px) {
+    .option {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    .description{
+
+    .description {
         display: flex;
         flex-direction: column;
     }
-    .option .choice{
+
+    .option .choice {
         margin: 0;
+    }
+}
+@media (min-width: 992px){
+    .option{
+        flex: 0 0 25%;
     }
 }
 
@@ -109,7 +132,7 @@
         overflow: hidden;
     }
 
-   
+
     #nav-toggle {
         display: block;
         background: transparent;
@@ -121,9 +144,7 @@
         z-index: 6;
         width: 50px;
         cursor: pointer;
-        /* transform: translate(0%, -50%); */
-
-    }
+       }
 
     #nav-toggle span,
     #nav-toggle span:before,
@@ -148,94 +169,70 @@
         top: -10px;
     }
 
-    .container-title{
+    .container-title {
         width: 80%;
     }
-    .main-menu li{
+
+    .main-menu li {
         display: block;
         padding: 10px 0;
         text-align: center;
         margin: 0;
     }
-    .main-menu a{
+
+    .main-menu a {
         color: #ffffff;
         font-weight: 600;
     }
+
     .main-menu a:hover {
-       text-decoration: underline;
+        text-decoration: underline;
     }
-   
-   
-    .main-menu{
+
+    .main-menu {
         display: none;
         padding: 0;
     }
-    .menu-open{
+
+    .menu-open {
         position: fixed;
         display: block;
         top: 0;
         right: 0;
         left: 0;
         margin-top: 70px;
-        z-index: 1000;      
-        background-color: rgba(0,0,0,0.8);
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
         overflow: auto;
-        
-    }
-    .main-menu .menu-open #nav-toggle span{
-            background: none;
-    }
-    .main-menu .menu-open #nav-toggle span:before{
-        top: 0;
-        transform: rotate(45deg);
-        transition-delay: 0s, 0.3s;
-        background-color: #b2002b;
-    }
-    .main-menu .menu-open #nav-toggle span:after{
-        bottom: 0;  
-        transform: rotate(-45deg);
-        transition-delay: 0s, 0.3s;
-        background-color: #b2002b;
-    }
-    
-    /* .icon span{
-        display: block;
-        position: absolute;
-        height: 9px;
-        width: 100%;
-        background-color: blue;
-        border-radius: 9px;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-    } */
 
+    }    
 
-
-
-
-
-
-
-    .title-services h3, .pricing h3, .testimonials h3, .gallery h3{
+    .title-services h3,
+    .pricing h3,
+    .testimonials h3,
+    .gallery h3 {
         font-size: 32px;
     }
-    .pricing-content{
+
+    .pricing-content {
         flex-direction: column;
         flex-wrap: wrap;
     }
-   
-    .pictures{
+
+    .pictures {
         flex-direction: column;
     }
-    .gallery a{
+
+    .gallery a {
         width: 100%;
         text-align: center;
     }
-    footer{
-        flex-direction: column-reverse;        
+
+    footer {
+        flex-direction: column-reverse;
     }
-    footer>p{
+
+    footer>p {
         width: 100%;
         padding: 15px;
         text-align: center;

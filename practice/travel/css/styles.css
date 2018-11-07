@@ -3,7 +3,6 @@ margin: 0;
 }
 .wrapper {
     margin:0 auto;
-    width: 100%;
 }
 h2{
     margin-top: 0;
@@ -92,9 +91,6 @@ nav {
 }
 
 .start h2 {
-    /* display: flex; */
-    /* flex-direction: column;
-    justify-content: space-between; */
     margin-bottom: 44px;
     line-height: 75px;
     font-family: 'Montserrat', sans-serif;
